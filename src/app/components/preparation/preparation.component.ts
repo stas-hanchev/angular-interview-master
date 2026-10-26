@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
+import { Subject, takeUntil } from 'rxjs';
 import { DeleteConfirmationModalComponent } from '../delete-confirmation-modal/delete-confirmation-modal.component';
-import { MOCK_DATA } from './preparation.component.config';
-import { QuestionItem } from '../category/category.component.config';
+import { QuestionItem, getQuestionsByCategory } from '../category/category.component.config';
 import { TruncatePipe } from '../../pipes/truncate.pipe';
 import { GenerateAnswerModalComponent } from '../generate-answer-modal/generate-answer-modal.component';
 
@@ -15,11 +16,25 @@ import { GenerateAnswerModalComponent } from '../generate-answer-modal/generate-
   templateUrl: './preparation.component.html',
   styleUrl: './preparation.component.scss',
 })
-export class PreparationComponent {
+export class PreparationComponent implements OnInit, OnDestroy {
   displayedColumns: string[] = ['position', 'question', 'actions'];
-  dataSource = new MatTableDataSource<QuestionItem>(MOCK_DATA);
+  dataSource = new MatTableDataSource<QuestionItem>();
 
-  constructor(public dialog: MatDialog) {}
+  private destroy$ = new Subject<void>();
+
+  constructor(public dialog: MatDialog, private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.route.queryParamMap.pipe(takeUntil(this.destroy$)).subscribe((params) => {
+      // TODO - use service instead of mocks
+      this.dataSource.data = getQuestionsByCategory(params.get('tabName') || 'angular');
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
 
   openGenerateDialog(question: QuestionItem): void {
     const dialogRef = this.dialog.open(GenerateAnswerModalComponent, {
