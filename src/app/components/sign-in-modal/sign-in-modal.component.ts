@@ -4,6 +4,9 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
+import { finalize } from 'rxjs';
+import { SignInService } from '../../services/sign-in.service';
+import { UserLoginResponse } from '../../models/response.model';
 
 @Component({
   selector: 'app-sign-in-modal',
@@ -19,33 +22,42 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class SignInModalComponent {
   signInForm: FormGroup;
+  isSubmitting = false;
 
   constructor(
     private fb: FormBuilder,
-    public dialogRef: MatDialogRef<SignInModalComponent>
+    private signInService: SignInService,
+    public dialogRef: MatDialogRef<SignInModalComponent, UserLoginResponse>
   ) {
     this.signInForm = this.fb.group({
-      login: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
   }
 
   onSubmit() {
-    if (this.signInForm.valid) {
-      const { login, password } = this.signInForm.value;
-      console.log('Login:', login);
-      console.log('Password:', password);
-      // TODO - Call the service
-      this.dialogRef.close(this.signInForm.value);
+    if (this.signInForm.invalid || this.isSubmitting) {
+      this.signInForm.markAllAsTouched();
+      return;
     }
+
+    const { email, password } = this.signInForm.value;
+    this.isSubmitting = true;
+    this.signInService
+      .login(email, password)
+      .pipe(finalize(() => (this.isSubmitting = false)))
+      .subscribe({
+        next: (response) => this.dialogRef.close(response),
+        error: () => {},
+      });
   }
 
   onCancel(): void {
     this.dialogRef.close();
   }
 
-  get login() {
-    return this.signInForm.get('login');
+  get email() {
+    return this.signInForm.get('email');
   }
 
   get password() {

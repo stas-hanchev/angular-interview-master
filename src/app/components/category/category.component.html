@@ -20,17 +20,11 @@
       <td mat-cell *matCellDef="let element">{{ element.question }}</td>
     </ng-container>
 
-    <!-- Answer Column -->
-    <ng-container matColumnDef="answer">
-      <th mat-header-cell *matHeaderCellDef>Answer</th>
-      <td mat-cell *matCellDef="let element">{{ element.answer | truncate:50 }}</td>
-    </ng-container>
-
     <!-- Actions Column -->
     <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element">
-        <button mat-button color="warn" class="text-uppercase" (click)="openDeleteDialog(element)">Delete</button>
+        <button mat-flat-button color="primary" class="text-uppercase" (click)="openAnswerDialog(element)">Show Answer</button>
       </td>
     </ng-container>
 

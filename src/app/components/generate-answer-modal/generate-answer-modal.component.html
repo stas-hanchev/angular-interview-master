@@ -1,8 +1,0 @@
-<h2 class="modal-header">{{ data.question }}</h2>
-
-@if (data.answer) {
-  <p class="modal-content" [appTypingAnimation]="data.answer" [typingSpeed]="50"></p>
-}
-<div class="modal-actions">
-  <button mat-flat-button color="primary" (click)="saveAnswer()">SAVE</button>
-</div>

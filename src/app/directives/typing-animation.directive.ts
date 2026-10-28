@@ -1,6 +1,6 @@
 import { Directive, ElementRef, Input, OnChanges, OnDestroy, Renderer2, SimpleChanges } from '@angular/core';
-import { Subscription, from, of } from 'rxjs';
-import { concatMap, delay } from 'rxjs/operators';
+import { Subscription, interval } from 'rxjs';
+import { map, takeWhile } from 'rxjs/operators';
 
 @Directive({
   selector: '[appTypingAnimation]',
@@ -8,7 +8,8 @@ import { concatMap, delay } from 'rxjs/operators';
 })
 export class TypingAnimationDirective implements OnChanges, OnDestroy {
   @Input() appTypingAnimation: string = '';
-  @Input() typingSpeed: number = 50; // Speed in ms between each character
+  @Input() typingSpeed: number = 10;
+  @Input() charsPerStep: number = 4;
 
   private typingSubscription?: Subscription;
 
@@ -28,21 +29,19 @@ export class TypingAnimationDirective implements OnChanges, OnDestroy {
     this.typingSubscription?.unsubscribe();
 
     const text = this.appTypingAnimation;
-    const textArray = text.split('');
     this.renderer.setProperty(this.el.nativeElement, 'textContent', '');
 
-    this.typingSubscription = from(textArray)
+    this.typingSubscription = interval(this.typingSpeed)
       .pipe(
-        concatMap(char => of(char).pipe(delay(this.typingSpeed)))
+        map((step) => (step + 1) * this.charsPerStep),
+        takeWhile((length) => length < text.length, true)
       )
-      .subscribe({
-        next: (char) => {
-          this.renderer.setProperty(
-            this.el.nativeElement,
-            'textContent',
-            this.el.nativeElement.textContent + char
-          );
-        }
+      .subscribe((length) => {
+        this.renderer.setProperty(
+          this.el.nativeElement,
+          'textContent',
+          text.slice(0, length)
+        );
       });
   }
 }

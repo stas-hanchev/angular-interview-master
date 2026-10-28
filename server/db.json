@@ -1,0 +1,2054 @@
+{
+  "users": [
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$oZvVB68NMvW8AApvAMfUxOeImVnY8pyQUtbak.4dKBmvYEpXxE4N.",
+      "firstName": "Test",
+      "lastName": "Art",
+      "id": 1
+    },
+    {
+      "email": "stas.hanchev@gmail.com",
+      "password": "$2a$10$stqSmhgrWWBftuEKYIdLKOwbYcy.LIqArBoPufsX5fies4rYn4BRi",
+      "firstName": "Stas",
+      "lastName": "Hanchev",
+      "id": 2
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "angular"
+    },
+    {
+      "id": 2,
+      "name": "typescript"
+    },
+    {
+      "id": 3,
+      "name": "javascript"
+    },
+    {
+      "id": 4,
+      "name": "rxjs"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "question": "Що таке Angular?",
+      "answer": "Angular — це платформа і фреймворк для розробки динамічних веб-додатків на мові TypeScript, який підтримується командою Google. Angular забезпечує розробників інструментами та бібліотеками для створення масштабованих, підтримуваних і високопродуктивних веб-додатків. Основні можливості Angular включають декларативне програмування для створення користувацького інтерфейсу, двостороннє зв’язування даних для синхронізації між моделлю і представленням, потужну систему модулів для організації коду, підтримку форм і валідації, а також засоби для роботи з маршрутизацією та HTTP-запитами. Angular також інтегрується з іншими бібліотеками та фреймворками, що дозволяє розробникам використовувати найкращі інструменти для вирішення конкретних завдань.",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "question": "Як встановити Angular CLI?",
+      "answer": "Для встановлення Angular CLI, необхідно мати встановлений Node.js та npm (Node Package Manager). Після цього можна відкрити командний рядок і виконати команду npm install -g @angular/cli, яка встановить Angular CLI глобально на вашій системі. Це дозволить використовувати команду ng для створення нових проектів, генерації компонентів, сервісів, модулів та інших будівельних блоків, а також для запуску, тестування та збірки додатків. Angular CLI спрощує процес розробки, автоматизуючи рутинні завдання і забезпечуючи узгодженість коду.",
+      "categoryId": 1
+    },
+    {
+      "id": 3,
+      "question": "Що таке компонент в Angular?",
+      "answer": "Компонент в Angular — це основний будівельний блок додатку, який включає в себе HTML-шаблон, CSS-стилі та логіку на TypeScript. Кожен компонент відповідає за певну частину інтерфейсу і може містити вкладені компоненти. Компоненти визначаються за допомогою декоратора @Component, який вказує на шаблон і стилі компонента, а також інші метадані, такі як селектор і залежності. Компоненти інкапсулюють логіку і представлення, що дозволяє їх повторно використовувати в різних частинах додатку. Angular забезпечує потужний механізм зв’язування даних, що дозволяє автоматично оновлювати представлення при зміні даних у моделі.",
+      "categoryId": 1
+    },
+    {
+      "id": 4,
+      "question": "Як створити новий компонент в Angular?",
+      "answer": "Для створення нового компонента в Angular використовується Angular CLI. Відкрийте командний рядок і виконайте команду ng generate component component-name або скорочено ng g c component-name. Angular CLI створить новий каталог з чотирма файлами: HTML-шаблоном, CSS-стилями, TypeScript-класом і тестовим файлом для компонента. Компонент автоматично додається до найближчого модуля (наприклад, AppModule). Ви можете налаштувати компонент, додаючи власні стилі, логіку і залежності. Використання Angular CLI спрощує процес створення компонентів і забезпечує узгодженість структури проекту.",
+      "categoryId": 1
+    },
+    {
+      "id": 5,
+      "question": "Що таке модуль в Angular?",
+      "answer": "Модуль в Angular — це контейнер для групи пов’язаних компонентів, сервісів, директив і пайпів, які формують певну функціональність додатку. Основний модуль додатку називається AppModule. Модулі визначаються за допомогою декоратора @NgModule, який містить метадані про компоненти, сервіси, директиви, пайпи, а також імпортовані та експортовані модулі. Модулі дозволяють організувати додаток у логічні блоки, що покращує масштабованість, підтримуваність і зрозумілість проекту. Крім основного модуля, можна створювати фіче-модулі для розділення різних функціональних частин додатку, а також шерові модулі для спільного використання компонентів і сервісів у різних частинах додатку.",
+      "categoryId": 1
+    },
+    {
+      "id": 6,
+      "question": "Що таке директива в Angular?",
+      "answer": "Директива — це клас з декоратором @Directive, який додає поведінку до елемента DOM або змінює його структуру. В Angular є три види директив: компоненти (директиви з шаблоном), атрибутні директиви (змінюють вигляд чи поведінку елемента, наприклад ngClass, ngStyle) та структурні директиви (додають або видаляють елементи, наприклад *ngIf, *ngFor). Власну директиву створюють командою ng generate directive name і підключають до елемента через її селектор.",
+      "categoryId": 1
+    },
+    {
+      "id": 7,
+      "question": "Що таке сервіс в Angular?",
+      "answer": "Сервіс — це клас, що містить логіку, яка не стосується безпосередньо відображення: роботу з HTTP, зберігання стану, обчислення, логування. Його позначають декоратором @Injectable і отримують у компонентах через Dependency Injection. Найчастіше сервіс реєструють як singleton для всього застосунку через providedIn: 'root'. Сервіси дозволяють ділити логіку між компонентами й робити компоненти тонкими та легкими для тестування.",
+      "categoryId": 1
+    },
+    {
+      "id": 8,
+      "question": "Що таке двостороннє зв’язування даних?",
+      "answer": "Двостороннє зв’язування даних синхронізує значення між властивістю компонента і елементом шаблону в обидва боки: зміна в моделі оновлює представлення, а введення користувача оновлює модель. Синтаксис — «банан у коробці» [(...)], наприклад [(ngModel)]=\"name\" для полів форми (потрібен FormsModule). Під капотом це комбінація property binding [value] та event binding (valueChange). Для власних компонентів двостороннє зв’язування працює, якщо є @Input() value та @Output() valueChange, а з Angular 17.2 — через model().",
+      "categoryId": 1
+    },
+    {
+      "id": 9,
+      "question": "Що таке шаблон в Angular?",
+      "answer": "Шаблон — це HTML-розмітка компонента, розширена синтаксисом Angular: інтерполяцією {{ }}, прив’язками властивостей [ ], подій ( ), директивами, пайпами та control flow блоками @if/@for/@switch. Шаблон задається у декораторі @Component через templateUrl (окремий файл) або template (рядок). Angular компілює шаблон у JavaScript-інструкції, які створюють і оновлюють DOM при зміні даних.",
+      "categoryId": 1
+    },
+    {
+      "id": 10,
+      "question": "Як працює маршрутизація в Angular?",
+      "answer": "Маршрутизація в Angular реалізується пакетом @angular/router. Ви описуєте масив Routes, де кожен маршрут зіставляє path з компонентом, і підключаєте його через provideRouter(routes) або RouterModule.forRoot(routes). Компонент, що відповідає поточному URL, рендериться в елементі router-outlet, а навігація відбувається через директиву routerLink або сервіс Router (navigate, navigateByUrl). Роутер підтримує параметри, query-параметри, вкладені маршрути, guards, resolvers і lazy loading.",
+      "categoryId": 1
+    },
+    {
+      "id": 11,
+      "question": "Як додати стиль до компонента в Angular?",
+      "answer": "Стилі компонента задаються в декораторі @Component через styleUrl/styleUrls (окремі файли CSS/SCSS) або styles (рядки). За замовчуванням стилі ізольовані завдяки ViewEncapsulation.Emulated — вони діють лише на шаблон цього компонента. Глобальні стилі додають у styles.scss або в масив styles у angular.json. Динамічні стилі можна застосовувати через [style.prop], [class.name], ngStyle та ngClass, а селектор :host дозволяє стилізувати сам хост-елемент компонента.",
+      "categoryId": 1
+    },
+    {
+      "id": 12,
+      "question": "Що таке інтерполяція в Angular?",
+      "answer": "Інтерполяція — це вбудовування значення виразу в текст шаблону за допомогою подвійних фігурних дужок: {{ user.name }}. Angular обчислює вираз у контексті компонента, перетворює результат на рядок і оновлює DOM при зміні даних. В інтерполяції можна використовувати пайпи ({{ date | date:'short' }}) і прості вирази, але не можна присвоювати значення чи використовувати оператори new, ++ тощо. Текст автоматично екранується, тому інтерполяція безпечна від XSS.",
+      "categoryId": 1
+    },
+    {
+      "id": 13,
+      "question": "Що таке *ngIf директива?",
+      "answer": "*ngIf — структурна директива, яка додає елемент у DOM, якщо умова істинна, і повністю видаляє його, якщо хибна (а не просто ховає). Підтримує гілку else через ng-template: *ngIf=\"isLoaded; else loading\", а також збереження результату: *ngIf=\"user$ | async as user\". Зірочка — це синтаксичний цукор, що перетворює елемент на ng-template. Починаючи з Angular 17 рекомендується використовувати вбудований блок @if.",
+      "categoryId": 1
+    },
+    {
+      "id": 14,
+      "question": "Що таке *ngFor директива?",
+      "answer": "*ngFor — структурна директива, яка рендерить шаблон для кожного елемента колекції: *ngFor=\"let item of items; let i = index\". Вона надає локальні змінні index, first, last, even, odd, count. Для оптимізації варто передавати trackBy-функцію, щоб Angular не перестворював DOM-елементи при оновленні масиву. В Angular 17 з’явився блок @for, де track є обов’язковим і який працює швидше.",
+      "categoryId": 1
+    },
+    {
+      "id": 15,
+      "question": "Як відправити дані з одного компонента в інший?",
+      "answer": "Від батька до дитини дані передають через @Input() (або input() з Angular 17.1), а від дитини до батька — через @Output() з EventEmitter, на подію якого батько підписується в шаблоні. Між компонентами, які не пов’язані напряму, дані передають через спільний сервіс із Subject/BehaviorSubject або сигналами. Також можна використовувати параметри маршруту, state роутера, ViewChild для доступу до дочірнього компонента або state management бібліотеки (NgRx).",
+      "categoryId": 1
+    },
+    {
+      "id": 16,
+      "question": "Що таке property binding в Angular?",
+      "answer": "Property binding прив’язує значення виразу з компонента до властивості DOM-елемента, директиви чи компонента за допомогою квадратних дужок: [src]=\"imageUrl\", [disabled]=\"isBusy\". Зв’язок односторонній — від компонента до шаблону. Існують також спеціальні форми: [attr.aria-label] для атрибутів, [class.active] для класів і [style.width.px] для стилів. Саме через property binding передаються значення в @Input() дочірніх компонентів.",
+      "categoryId": 1
+    },
+    {
+      "id": 17,
+      "question": "Що таке event binding в Angular?",
+      "answer": "Event binding дозволяє реагувати на події DOM або власні події компонентів за допомогою круглих дужок: (click)=\"save()\", (keyup.enter)=\"search()\". Об’єкт події доступний через змінну $event. Зв’язок односторонній — від шаблону до компонента. Через event binding батьківський компонент підписується на @Output() дочірнього компонента.",
+      "categoryId": 1
+    },
+    {
+      "id": 18,
+      "question": "Що таке Angular CLI і як його використовувати?",
+      "answer": "Angular CLI — це інструмент командного рядка для створення, розробки, тестування та збірки Angular-застосунків. Основні команди: ng new (новий проєкт), ng serve (dev-сервер з hot reload), ng generate або ng g (компоненти, сервіси, директиви, пайпи, guards), ng build (збірка), ng test (юніт-тести), ng update (оновлення версій) та ng add (встановлення бібліотек зі schematics). CLI налаштовується через angular.json і забезпечує однакову структуру проєкту.",
+      "categoryId": 1
+    },
+    {
+      "id": 19,
+      "question": "Що таке структурні директиви в Angular?",
+      "answer": "Структурні директиви змінюють структуру DOM — додають, видаляють або повторюють елементи. Класичні приклади: *ngIf, *ngFor, *ngSwitchCase. Зірочка перед назвою є синтаксичним цукром: Angular обгортає елемент у ng-template, а директива через ViewContainerRef і TemplateRef вирішує, коли й скільки разів його рендерити. На один елемент можна застосувати лише одну структурну директиву; в Angular 17 їм на заміну прийшов вбудований control flow (@if, @for, @switch).",
+      "categoryId": 1
+    },
+    {
+      "id": 20,
+      "question": "Що таке Angular шаблонний синтаксис?",
+      "answer": "Шаблонний синтаксис Angular — це набір розширень HTML: інтерполяція {{ }}, property binding [prop], event binding (event), двостороннє зв’язування [(ngModel)], шаблонні змінні #ref, пайпи |, директиви та control flow блоки @if, @for, @switch, @defer. Вирази в шаблоні виконуються в контексті компонента, не мають доступу до глобальних об’єктів (window, document) і мають бути простими та без побічних ефектів.",
+      "categoryId": 1
+    },
+    {
+      "id": 21,
+      "question": "Як створити форму в Angular?",
+      "answer": "В Angular є два підходи до форм. Template-driven форми будуються в шаблоні за допомогою ngModel і директив валідації (required, minlength), для них потрібен FormsModule. Reactive форми описуються в коді через FormGroup, FormControl і FormBuilder, підключаються в шаблоні через [formGroup] і formControlName, для них потрібен ReactiveFormsModule. Для складних форм з динамічною логікою та валідацією рекомендовано reactive підхід.",
+      "categoryId": 1
+    },
+    {
+      "id": 22,
+      "question": "Як працює ngModel?",
+      "answer": "ngModel — директива з FormsModule, яка створює FormControl для поля форми й реалізує двостороннє зв’язування: [(ngModel)]=\"user.name\". Вона слухає події введення, оновлює модель і оновлює поле при зміні моделі. ngModel також відстежує стан поля (valid, touched, dirty) і застосовує до нього CSS-класи ng-valid, ng-invalid, ng-touched тощо. Усередині тегу form поле з ngModel повинно мати атрибут name.",
+      "categoryId": 1
+    },
+    {
+      "id": 23,
+      "question": "Що таке валідація форм в Angular?",
+      "answer": "Валідація форм перевіряє коректність введених даних. У template-driven формах використовують атрибути required, minlength, maxlength, pattern, email, а в reactive формах — Validators.required, Validators.minLength тощо. Можна писати власні синхронні (функція, що повертає ValidationErrors або null) та асинхронні валідатори (повертають Observable чи Promise). Стан доступний через control.valid, control.errors, control.touched, що дозволяє показувати повідомлення про помилки.",
+      "categoryId": 1
+    },
+    {
+      "id": 24,
+      "question": "Що таке life cycle hooks в Angular?",
+      "answer": "Lifecycle hooks — це методи, які Angular викликає на різних етапах життя компонента: ngOnChanges (зміна @Input), ngOnInit (ініціалізація, один раз), ngDoCheck (власна перевірка змін), ngAfterContentInit і ngAfterContentChecked (проєкція контенту), ngAfterViewInit і ngAfterViewChecked (ініціалізація представлення), ngOnDestroy (перед знищенням). Найчастіше використовують ngOnInit для завантаження даних і ngOnDestroy для відписок і очищення ресурсів.",
+      "categoryId": 1
+    },
+    {
+      "id": 25,
+      "question": "Як працює Angular CLI?",
+      "answer": "Angular CLI працює поверх системи builders і schematics. Команди ng serve, ng build, ng test викликають builders з angular.json (з Angular 17 за замовчуванням — application builder на основі esbuild і Vite для dev-сервера). Команди ng generate та ng add запускають schematics — шаблони коду, які створюють і змінюють файли проєкту. ng update використовує міграційні schematics, щоб автоматично оновити код під нову версію.",
+      "categoryId": 1
+    },
+    {
+      "id": 26,
+      "question": "Що таке Standalone компонент в Angular?",
+      "answer": "Standalone компонент — це компонент з прапорцем standalone: true, який не потребує оголошення в NgModule. Він сам імпортує все, що йому потрібно (інші компоненти, директиви, пайпи, модулі), через масив imports у декораторі @Component. Standalone API з’явились в Angular 14, стали стабільними в 15, а з Angular 17 нові проєкти створюються standalone за замовчуванням. Застосунок можна запустити без AppModule через bootstrapApplication.",
+      "categoryId": 1
+    },
+    {
+      "id": 27,
+      "question": "Як створити Standalone компонент?",
+      "answer": "Найпростіше — командою ng generate component name, яка в Angular 17 створює standalone компонент за замовчуванням (раніше — з прапорцем --standalone). Вручну це компонент з standalone: true і масивом imports, у який додають усе, що використовується в шаблоні, наприклад CommonModule, RouterLink чи інші компоненти. Використати його можна, додавши в imports іншого компонента, вказавши в маршруті (component або loadComponent) або передавши в bootstrapApplication як кореневий.",
+      "categoryId": 1
+    },
+    {
+      "id": 28,
+      "question": "Які переваги використання Standalone компонентів?",
+      "answer": "Standalone компоненти зменшують кількість шаблонного коду, бо не потрібні NgModule. Залежності кожного компонента видно прямо в його декораторі, що спрощує розуміння і рефакторинг. Вони краще підтримують lazy loading (loadComponent) і tree-shaking, спрощують тестування (не треба налаштовувати модуль) і роблять вхід у Angular легшим для новачків.",
+      "categoryId": 1
+    },
+    {
+      "id": 29,
+      "question": "Що таке Deferrable Views?",
+      "answer": "Deferrable Views (блок @defer) з’явились в Angular 17 і дозволяють відкласти завантаження частини шаблону разом з її залежностями. Компоненти, директиви та пайпи всередині @defer автоматично виносяться в окремий chunk і завантажуються лише при спрацюванні тригера (наприклад, коли блок з’являється у viewport). Це зменшує початковий бандл і пришвидшує першу відмальовку сторінки без ручного налаштування lazy loading.",
+      "categoryId": 1
+    },
+    {
+      "id": 30,
+      "question": "Як використовувати @defer в Angular?",
+      "answer": "Блок @defer обгортає частину шаблону, яку потрібно завантажити пізніше: @defer (on viewport) { важкий компонент }. До нього можна додати блоки @placeholder (що показувати до початку завантаження), @loading (під час завантаження, з параметрами after і minimum) та @error (якщо завантаження не вдалось). Залежності всередині мають бути standalone і не використовуватись поза @defer у тому ж файлі, інакше вони не винесуться в окремий chunk.",
+      "categoryId": 1
+    },
+    {
+      "id": 31,
+      "question": "Які є тригери для @defer?",
+      "answer": "Тригери @defer: on idle (за замовчуванням, коли браузер вільний), on viewport (елемент потрапив у видиму область), on interaction (клік чи keydown по елементу), on hover (наведення миші), on immediate (одразу після рендеру), on timer(500ms) (через заданий час) та when condition (коли вираз стає істинним). Тригери можна комбінувати, а для попереднього завантаження використовують prefetch on ... або prefetch when ....",
+      "categoryId": 1
+    },
+    {
+      "id": 32,
+      "question": "Що таке синтаксис @if в Angular?",
+      "answer": "@if — вбудований блок control flow, що з’явився в Angular 17 на заміну *ngIf: @if (user) { ... } @else if (guest) { ... } @else { ... }. Він не потребує імпорту CommonModule, підтримує ланцюжки else if і дозволяє зберегти результат виразу: @if (user$ | async; as user). Синтаксис ближчий до JavaScript, краще перевіряється типами і працює трохи швидше за директиву.",
+      "categoryId": 1
+    },
+    {
+      "id": 33,
+      "question": "Що таке синтаксис @for в Angular?",
+      "answer": "@for — вбудований блок для перебору колекцій: @for (item of items; track item.id) { ... } @empty { список порожній }. Вираз track обов’язковий — він дозволяє Angular ефективно оновлювати DOM при змінах масиву. Блок надає змінні $index, $first, $last, $even, $odd, $count, а гілка @empty показується, коли колекція порожня. Завдяки новому алгоритму порівняння @for працює помітно швидше за *ngFor.",
+      "categoryId": 1
+    },
+    {
+      "id": 34,
+      "question": "Що таке синтаксис @switch в Angular?",
+      "answer": "@switch — вбудований блок, що замінює ngSwitch: @switch (status) { @case ('active') { ... } @case ('blocked') { ... } @default { ... } }. Значення порівнюються через ===. На відміну від JavaScript switch, тут немає провалювання (fallthrough), тому break не потрібен. Блок не потребує імпортів і краще звужує типи, ніж стара директива.",
+      "categoryId": 1
+    },
+    {
+      "id": 35,
+      "question": "Як працює @defer (on viewport)?",
+      "answer": "@defer (on viewport) запускає завантаження вмісту, коли блок потрапляє у видиму область екрана. Angular використовує IntersectionObserver і спостерігає за елементом з @placeholder, тому для цього тригера потрібен блок @placeholder з одним кореневим елементом або вказаний явно елемент: on viewport(trigger), де trigger — шаблонна змінна. Це зручно для важких компонентів нижче першого екрана, наприклад графіків чи коментарів.",
+      "categoryId": 1
+    },
+    {
+      "id": 36,
+      "question": "Що таке анімації в Angular?",
+      "answer": "Анімації в Angular реалізуються пакетом @angular/animations і підключаються через provideAnimations() або provideAnimationsAsync(). Анімації описуються в метаданих компонента через trigger, state, style, transition, animate, keyframes, query, stagger і group, а в шаблоні прив’язуються як [@triggerName]=\"state\". Підтримуються переходи :enter і :leave для елементів, що з’являються або зникають, а також анімації між маршрутами.",
+      "categoryId": 1
+    },
+    {
+      "id": 37,
+      "question": "Як працює Dependency Injection в Angular?",
+      "answer": "Dependency Injection — механізм, за яким Angular створює залежності й передає їх класам, замість того щоб класи створювали їх самостійно. Залежність отримують через параметри конструктора або функцію inject(). Ієрархія інжекторів (EnvironmentInjector, ElementInjector) визначає, де шукати провайдер і скільки буде екземплярів. Провайдери реєструють через providedIn у @Injectable, масив providers у компоненті, маршруті чи ApplicationConfig, з варіантами useClass, useValue, useFactory, useExisting та InjectionToken.",
+      "categoryId": 1
+    },
+    {
+      "id": 38,
+      "question": "Що таке форми в Angular?",
+      "answer": "Форми в Angular — це механізм збору та валідації введення користувача з відстеженням стану полів (valid, dirty, touched). Є два підходи: template-driven (ngModel у шаблоні, FormsModule) і reactive (FormGroup, FormControl, FormArray у коді, ReactiveFormsModule). Обидва підходи будуються на спільних класах AbstractControl, підтримують синхронні та асинхронні валідатори і надають Observable valueChanges і statusChanges.",
+      "categoryId": 1
+    },
+    {
+      "id": 39,
+      "question": "Як працює реактивне програмування в Angular з RxJS?",
+      "answer": "Angular глибоко інтегрований з RxJS: HttpClient повертає Observable, роутер надає paramMap і events як потоки, reactive форми мають valueChanges. Дані обробляють операторами (map, switchMap, debounceTime, catchError), а в шаблоні підписуються через async pipe, який сам відписується. Сервіси часто зберігають стан у BehaviorSubject, а компоненти реагують на його зміни. Для зручності є інтероп із сигналами: toSignal і toObservable.",
+      "categoryId": 1
+    },
+    {
+      "id": 40,
+      "question": "Що таке Change Detection в Angular?",
+      "answer": "Change Detection — механізм, що синхронізує стан компонентів з DOM. За замовчуванням Zone.js перехоплює асинхронні події (кліки, таймери, HTTP) і після них Angular перевіряє дерево компонентів зверху вниз, порівнюючи значення прив’язок з попередніми. Стратегія Default перевіряє всі компоненти, а OnPush — лише ті, де змінились @Input, сталася подія або компонент позначено markForCheck. Сигнали дозволяють точніше оновлювати лише залежні частини представлення.",
+      "categoryId": 1
+    },
+    {
+      "id": 41,
+      "question": "Що таке HttpClientModule і як його використовувати?",
+      "answer": "HttpClientModule надає сервіс HttpClient для HTTP-запитів. У standalone застосунках замість модуля використовують provideHttpClient() в ApplicationConfig. HttpClient інжектують у сервіс і викликають get, post, put, patch, delete — методи повертають Observable з типізованою відповіддю: this.http.get з типом User[] на url. Запит відправляється лише після підписки; підтримуються параметри, заголовки, інтерцептори та обробка помилок через catchError.",
+      "categoryId": 1
+    },
+    {
+      "id": 42,
+      "question": "Як реалізувати lazy loading в Angular?",
+      "answer": "Lazy loading — завантаження частини застосунку лише тоді, коли користувач переходить на відповідний маршрут. У маршрутах використовують loadComponent: () => import('./admin.component').then(m => m.AdminComponent) для standalone компонента або loadChildren для набору маршрутів чи модуля. Збирач виносить такий код в окремий chunk, що зменшує початковий бандл. Для фонового завантаження можна увімкнути стратегію PreloadAllModules, а для частин шаблону — використати @defer.",
+      "categoryId": 1
+    },
+    {
+      "id": 43,
+      "question": "Що таке pipes в Angular і як їх створювати?",
+      "answer": "Pipe — це клас, що трансформує значення в шаблоні: {{ price | currency:'UAH' }}. Вбудовані пайпи: date, currency, number, percent, uppercase, lowercase, json, slice, async. Власний пайп створюють класом з декоратором @Pipe({ name: 'truncate', standalone: true }), що реалізує інтерфейс PipeTransform з методом transform(value, ...args). Пайпи бувають pure (за замовчуванням, перераховуються лише при зміні вхідного значення) та impure (pure: false, перераховуються при кожній перевірці змін).",
+      "categoryId": 1
+    },
+    {
+      "id": 44,
+      "question": "Як працює роутинг в Angular?",
+      "answer": "Роутер Angular зіставляє поточний URL з конфігурацією маршрутів, створює відповідний компонент і рендерить його в router-outlet. Перед активацією маршруту виконуються guards (canActivate, canMatch, canDeactivate) і resolvers. Параметри маршруту доступні через ActivatedRoute (paramMap, queryParamMap) або через @Input при увімкненому withComponentInputBinding(). Навігація виконується через routerLink у шаблоні або Router.navigate у коді, а події навігації доступні через Router.events.",
+      "categoryId": 1
+    },
+    {
+      "id": 45,
+      "question": "Що таке інтерцептори в Angular?",
+      "answer": "Інтерцептори перехоплюють HTTP-запити та відповіді HttpClient і дозволяють централізовано змінювати їх: додавати токен авторизації, логувати, показувати спінер, обробляти помилки чи повторювати запити. У сучасному Angular інтерцептор — це функція HttpInterceptorFn (req, next), що повертає next(req.clone(...)), і реєструється через provideHttpClient(withInterceptors([authInterceptor])). Класичні класові інтерцептори реалізують інтерфейс HttpInterceptor і реєструються через HTTP_INTERCEPTORS.",
+      "categoryId": 1
+    },
+    {
+      "id": 46,
+      "question": "Як реалізувати guard в Angular?",
+      "answer": "Guard — це функція (CanActivateFn, CanMatchFn, CanDeactivateFn, CanActivateChildFn), яку роутер викликає перед навігацією. Вона повертає boolean, UrlTree (для редиректу) або Observable чи Promise з ними. Наприклад: export const authGuard: CanActivateFn = () => inject(AuthService).isLoggedIn() || inject(Router).createUrlTree(['/login']). Guard підключається в маршруті: { path: 'admin', component: AdminComponent, canActivate: [authGuard] }.",
+      "categoryId": 1
+    },
+    {
+      "id": 47,
+      "question": "Як налаштувати форми в Angular?",
+      "answer": "Для template-driven форм імпортують FormsModule, додають ngModel з атрибутом name до полів і обробляють (ngSubmit) на тегу form. Для reactive форм імпортують ReactiveFormsModule, у компоненті створюють FormGroup (зручно через FormBuilder або inject(FormBuilder)) з контролами та валідаторами, а в шаблоні прив’язують [formGroup] і formControlName. Далі налаштовують відображення помилок, блокування кнопки при невалідній формі та обробку відправки.",
+      "categoryId": 1
+    },
+    {
+      "id": 48,
+      "question": "Що таке Angular Material?",
+      "answer": "Angular Material — офіційна бібліотека UI-компонентів від команди Angular, що реалізує Material Design. Вона містить кнопки, форми, таблиці (mat-table), діалоги (MatDialog), меню, вкладки, sidenav, toolbar, datepicker та інші компоненти з підтримкою доступності й тем. Встановлюється командою ng add @angular/material, а компоненти імпортуються окремими модулями, наприклад MatButtonModule. В основі лежить Angular CDK.",
+      "categoryId": 1
+    },
+    {
+      "id": 49,
+      "question": "Як працювати з Observables в Angular?",
+      "answer": "Observable — це потік значень, на який підписуються методом subscribe або через async pipe у шаблоні. У сервісах Observable повертають з HttpClient чи створюють через Subject/BehaviorSubject, а трансформують операторами в pipe(): map, filter, switchMap, catchError. Важливо відписуватись від довготривалих потоків: через async pipe, takeUntil з destroy$ або takeUntilDestroyed() з Angular 16. HTTP-запити завершуються самі після відповіді.",
+      "categoryId": 1
+    },
+    {
+      "id": 50,
+      "question": "Що таке шаблонні змінні в Angular?",
+      "answer": "Шаблонна змінна оголошується через # і дає посилання на DOM-елемент, компонент, директиву чи ng-template у межах шаблону: input #nameInput, а потім (click)=\"save(nameInput.value)\". Можна отримати екземпляр директиви через експорт: #form=\"ngForm\". Шаблонні змінні також використовуються з @ViewChild('nameInput') для доступу з коду компонента та як тригер у @defer (on viewport(ref)).",
+      "categoryId": 1
+    },
+    {
+      "id": 51,
+      "question": "Як працює ViewChild і ContentChild?",
+      "answer": "@ViewChild і @ViewChildren дають доступ до елементів, компонентів чи директив, що знаходяться у власному шаблоні компонента; вони доступні після ngAfterViewInit. @ContentChild і @ContentChildren дають доступ до вмісту, який батько передав у компонент через проєкцію (ng-content); вони доступні після ngAfterContentInit. Параметр { static: true } дозволяє отримати елемент уже в ngOnInit, якщо він не всередині умовного блоку. З Angular 17.2 є сигнальні аналоги viewChild() і contentChild().",
+      "categoryId": 1
+    },
+    {
+      "id": 52,
+      "question": "Як працювати з реактивними формами в Angular?",
+      "answer": "Reactive форми описують у компоненті: form = new FormGroup({ email: new FormControl('', [Validators.required, Validators.email]) }) або через FormBuilder. У шаблоні форму прив’язують через [formGroup]=\"form\" і formControlName=\"email\", а для вкладених груп і списків використовують formGroupName і formArrayName. Значення читають через form.value або getRawValue(), стежать за змінами через valueChanges, а змінюють через setValue і patchValue. З Angular 14 форми строго типізовані.",
+      "categoryId": 1
+    },
+    {
+      "id": 53,
+      "question": "Що таке ViewEncapsulation?",
+      "answer": "ViewEncapsulation визначає, як стилі компонента ізолюються від решти застосунку. Emulated (за замовчуванням) додає унікальні атрибути до елементів і селекторів, імітуючи Shadow DOM. ShadowDom використовує нативний Shadow DOM браузера, тому стилі повністю ізольовані. None вимикає ізоляцію, і стилі компонента стають глобальними. Режим задається в декораторі: encapsulation: ViewEncapsulation.None.",
+      "categoryId": 1
+    },
+    {
+      "id": 54,
+      "question": "Як налаштувати і використовувати Angular Router?",
+      "answer": "Описують масив маршрутів: const routes: Routes = [{ path: '', component: HomeComponent }, { path: 'users/:id', component: UserComponent }, { path: '**', component: NotFoundComponent }]. Підключають через provideRouter(routes) в ApplicationConfig (або RouterModule.forRoot у модульному застосунку), додають router-outlet у кореневий шаблон, а для навігації використовують routerLink і routerLinkActive. Параметри читають з ActivatedRoute, а програмну навігацію виконують через Router.navigate(['/users', id]).",
+      "categoryId": 1
+    },
+    {
+      "id": 55,
+      "question": "Як працювати з @Input та @Output?",
+      "answer": "@Input() позначає властивість, яку батько передає в дочірній компонент: у шаблоні батька це виглядає як app-user з [user]=\"currentUser\". @Output() позначає подію дочірнього компонента — властивість типу EventEmitter, яку дитина викликає через emit(value), а батько обробляє через (selected)=\"onSelect($event)\". @Input підтримує опції required, alias і transform. З Angular 17.1 доступні сигнальні input(), а з 17.3 — output().",
+      "categoryId": 1
+    },
+    {
+      "id": 56,
+      "question": "Що таке модульні тести в Angular?",
+      "answer": "Модульні (юніт) тести перевіряють окремі частини застосунку ізольовано: компоненти, сервіси, пайпи, директиви. Angular CLI за замовчуванням налаштовує Jasmine як фреймворк і Karma як раннер; тести лежать у файлах *.spec.ts і запускаються командою ng test. TestBed створює тестове оточення: TestBed.configureTestingModule({ imports: [MyComponent], providers: [...] }), після чого через ComponentFixture перевіряють DOM і поведінку. Залежності підміняють моками чи шпигунами (jasmine.createSpyObj).",
+      "categoryId": 1
+    },
+    {
+      "id": 57,
+      "question": "Як використовувати Dependency Injection в компонентах?",
+      "answer": "У компоненті залежність отримують через конструктор: constructor(private userService: UserService) {} або функцію inject(): private userService = inject(UserService). Angular знайде провайдер в ієрархії інжекторів. Якщо додати сервіс у масив providers компонента, кожен екземпляр компонента отримає власний екземпляр сервісу, доступний також його дочірнім компонентам. Модифікатори @Optional, @Self, @SkipSelf і @Host (або відповідні опції inject) керують пошуком залежності.",
+      "categoryId": 1
+    },
+    {
+      "id": 58,
+      "question": "Що таке продовжувані оператори в RxJS?",
+      "answer": "Імовірно, мова про pipeable (ланцюжкові) оператори RxJS — чисті функції, які передаються в метод pipe() і повертають новий Observable, не змінюючи вихідний: source$.pipe(filter(x => x > 0), map(x => x * 2)). Їх можна поєднувати в довгі ланцюжки, а невикористані оператори вирізаються tree-shaking. Протилежність — creation-оператори (of, from, interval, fromEvent), які створюють нові Observable.",
+      "categoryId": 1
+    },
+    {
+      "id": 59,
+      "question": "Як працює trackBy функція в ngFor?",
+      "answer": "trackBy — це функція для *ngFor, яка повертає унікальний ідентифікатор елемента: trackBy: trackById, де trackById(index, item) повертає item.id. Без неї Angular порівнює елементи за посиланням, і при заміні масиву (наприклад, після нового HTTP-запиту) перестворює весь DOM списку. З trackBy Angular перевикористовує існуючі DOM-вузли для елементів з тим самим ідентифікатором, що суттєво пришвидшує рендер великих списків. У блоці @for аналогом є обов’язковий вираз track.",
+      "categoryId": 1
+    },
+    {
+      "id": 60,
+      "question": "Що таке OnPush Change Detection Strategy?",
+      "answer": "OnPush — стратегія виявлення змін, при якій Angular перевіряє компонент лише в таких випадках: змінилось посилання на якийсь @Input, у компоненті чи його нащадках сталася подія, async pipe отримав нове значення, змінився сигнал, прочитаний у шаблоні, або компонент вручну позначено через ChangeDetectorRef.markForCheck(). Вмикається через changeDetection: ChangeDetectionStrategy.OnPush. Стратегія суттєво зменшує кількість перевірок, але вимагає працювати з даними іммутабельно.",
+      "categoryId": 1
+    },
+    {
+      "id": 61,
+      "question": "Як використовувати Router Guards?",
+      "answer": "Guards підключають у конфігурації маршруту: canActivate (чи можна відкрити маршрут), canActivateChild (для дочірніх маршрутів), canDeactivate (чи можна покинути, наприклад, при незбереженій формі), canMatch (чи взагалі зіставляти маршрут, корисно для lazy-модулів). Сучасні guards — це функції, в яких через inject() отримують потрібні сервіси. Guard повертає true, false або UrlTree для перенаправлення, синхронно чи через Observable/Promise.",
+      "categoryId": 1
+    },
+    {
+      "id": 62,
+      "question": "Що таке RouterLinkActive?",
+      "answer": "RouterLinkActive — директива, яка додає CSS-клас до елемента, коли пов’язаний з ним routerLink відповідає поточному маршруту: a routerLink=\"/users\" routerLinkActive=\"active\". Опція [routerLinkActiveOptions]=\"{ exact: true }\" вимагає точного збігу URL, що корисно для кореневого посилання. Директиву можна поставити на батьківський елемент, тоді вона реагує на будь-який вкладений routerLink, а через #rla=\"routerLinkActive\" можна читати стан isActive.",
+      "categoryId": 1
+    },
+    {
+      "id": 63,
+      "question": "Як працює Angular Service Worker?",
+      "answer": "Angular Service Worker (@angular/service-worker) — готова реалізація service worker, що кешує ресурси застосунку та відповіді API згідно з конфігурацією ngsw-config.json. Після першого завантаження застосунок може працювати офлайн і завантажуватись швидше. Service worker перевіряє наявність нових версій, а сервіс SwUpdate дозволяє повідомити користувача про оновлення. Додається командою ng add @angular/pwa і працює лише в production-збірці через HTTPS або localhost.",
+      "categoryId": 1
+    },
+    {
+      "id": 64,
+      "question": "Що таке Angular Animations?",
+      "answer": "Angular Animations — модуль @angular/animations, що дозволяє декларативно описувати анімації в метаданих компонента. Основні функції: trigger (іменований тригер), state (стан зі стилями), transition (перехід між станами, включно з :enter і :leave), animate (тривалість і easing), keyframes, group, sequence, query і stagger. Підключається через provideAnimations() або provideAnimationsAsync(), а в шаблоні тригер прив’язується як [@fade]=\"state\". Також можна обробляти колбеки (@fade.done).",
+      "categoryId": 1
+    },
+    {
+      "id": 65,
+      "question": "Як налаштувати прогресивний веб-додаток (PWA) з Angular?",
+      "answer": "Виконайте ng add @angular/pwa — команда додасть @angular/service-worker, файли manifest.webmanifest і ngsw-config.json, іконки та реєстрацію service worker через provideServiceWorker. Далі в ngsw-config.json налаштовують кешування assetGroups (статичні ресурси) і dataGroups (API зі стратегіями performance або freshness). Збирають застосунок через ng build і перевіряють через HTTP-сервер та Lighthouse. Для повідомлень про нові версії використовують сервіс SwUpdate.",
+      "categoryId": 1
+    },
+    {
+      "id": 66,
+      "question": "Що таке Standalone сервіси?",
+      "answer": "Окремого поняття «standalone сервіс» в Angular немає: сервіси ніколи не потребували оголошення в NgModule. Зазвичай так називають сервіси з @Injectable({ providedIn: 'root' }), які автоматично доступні всьому застосунку як singleton і видаляються tree-shaking, якщо не використовуються. У standalone застосунках провайдери, які раніше давали модулі, підключаються функціями provideXxx() (provideRouter, provideHttpClient) в ApplicationConfig.",
+      "categoryId": 1
+    },
+    {
+      "id": 67,
+      "question": "Як створити Standalone сервіси?",
+      "answer": "Створіть сервіс командою ng generate service name і залиште @Injectable({ providedIn: 'root' }) — він стане singleton для всього застосунку без жодних модулів. Якщо потрібен окремий екземпляр для частини застосунку, приберіть providedIn і додайте сервіс у providers компонента або маршруту. Для бібліотек зручно створити функцію provideFeature(config), що повертає масив провайдерів (або EnvironmentProviders через makeEnvironmentProviders), і викликати її в ApplicationConfig.",
+      "categoryId": 1
+    },
+    {
+      "id": 68,
+      "question": "Як використовувати @defer з @placeholder?",
+      "answer": "@placeholder показує вміст до того, як почнеться завантаження відкладеного блоку: @defer (on viewport) { важкий компонент } @placeholder (minimum 500ms) { скелетон }. Параметр minimum задає мінімальний час показу, щоб уникнути миготіння. Вміст placeholder завантажується одразу (eagerly), тож він має бути легким. Для тригерів on viewport, on hover та on interaction елемент з placeholder слугує цільовим елементом, якщо явний не вказано.",
+      "categoryId": 1
+    },
+    {
+      "id": 69,
+      "question": "Як використовувати @defer (on idle)?",
+      "answer": "@defer (on idle) — тригер за замовчуванням: вміст завантажується, коли браузер перейшов у стан простою, що визначається через requestIdleCallback. Це підходить для некритичного контенту, який не потрібен одразу, але добре мати його готовим якомога швидше без шкоди для першої відмальовки. Записи @defer і @defer (on idle) еквівалентні.",
+      "categoryId": 1
+    },
+    {
+      "id": 70,
+      "question": "Що таке @defer (on timer)?",
+      "answer": "@defer (on timer(2s)) завантажує вміст через заданий проміжок часу після рендеру блоку; час вказується в мілісекундах (500ms) або секундах (2s). Це корисно для другорядних елементів, наприклад банерів, віджетів чату чи рекомендацій, які не повинні конкурувати за ресурси з основним контентом. Тригер можна комбінувати з іншими, наприклад on timer(5s), on viewport — спрацює той, що настане першим.",
+      "categoryId": 1
+    },
+    {
+      "id": 71,
+      "question": "Як використовувати синтаксис @if з множинними умовами?",
+      "answer": "Умови комбінують логічними операторами всередині виразу або ланцюжками гілок: @if (user && user.isAdmin) { ... } @else if (user) { ... } @else { ... }. Результат виразу можна зберегти через as: @if (user$ | async; as user) { ... }. Для складної логіки краще винести умову в computed() чи геттер компонента, щоб шаблон залишався читабельним.",
+      "categoryId": 1
+    },
+    {
+      "id": 72,
+      "question": "Що таке @switch (expression)?",
+      "answer": "У @switch (expression) вираз в дужках обчислюється один раз, після чого його значення порівнюється через === з кожним @case: @switch (user.role) { @case ('admin') { ... } @case ('editor') { ... } @default { ... } }. Виконується лише перший відповідний блок, провалювання між case немає. Якщо жоден case не підійшов, рендериться @default, а якщо його немає — нічого.",
+      "categoryId": 1
+    },
+    {
+      "id": 73,
+      "question": "Як комбінувати @defer з @if?",
+      "answer": "@defer та @if можна вкладати один в одного. Варіант @if (showChart) { @defer (on viewport) { chart } } відкладає завантаження лише тоді, коли блок узагалі має показуватись. Варіант @defer (when isReady) { ... } використовує умову як тригер, але після першого завантаження блок не повертається назад, навіть якщо умова стане хибною. Тому для керування видимістю використовують @if, а @defer — лише для відкладеного завантаження.",
+      "categoryId": 1
+    },
+    {
+      "id": 74,
+      "question": "Які переваги використання нового синтаксису if, for та switch?",
+      "answer": "Новий control flow вбудований у компілятор, тому не потребує імпорту CommonModule чи NgIf і NgFor. Синтаксис ближчий до JavaScript, підтримує @else if, @empty і зберігання результату через as. Він краще звужує типи в шаблонах і працює швидше, особливо @for з новим алгоритмом порівняння та обов’язковим track. Існуючі шаблони можна автоматично мігрувати командою ng generate @angular/core:control-flow.",
+      "categoryId": 1
+    },
+    {
+      "id": 75,
+      "question": "Як працює @defer з асинхронними даними?",
+      "answer": "@defer працює з асинхронними даними через тригер when: @defer (when data()) { компонент з даними } @placeholder { ... } @loading { спінер }. Водночас сам @defer відповідає за завантаження коду компонентів, а не даних, тому дані зазвичай отримують через сервіс, async pipe або сигнали, а @if усередині відкладеного блоку перевіряє їх наявність. Блок @error спрацьовує лише при невдалому завантаженні коду, а не HTTP-запиту.",
+      "categoryId": 1
+    },
+    {
+      "id": 76,
+      "question": "Як працює Angular Ivy?",
+      "answer": "Ivy — компілятор і рендеринг-рушій Angular, що став стандартним з Angular 9. Він компілює кожен компонент у набір інструкцій (принцип locality), завдяки чому збірка інкрементальна, а невикористаний код ефективно видаляється tree-shaking. Ivy дав менші бандли, швидшу компіляцію, кращі повідомлення про помилки в шаблонах і зробив можливими standalone компоненти, сигнали та @defer.",
+      "categoryId": 1
+    },
+    {
+      "id": 77,
+      "question": "Що таке Renderer2 в Angular?",
+      "answer": "Renderer2 — абстракція для безпечної роботи з DOM без прямого доступу до нативних API: createElement, appendChild, setAttribute, addClass, setStyle, listen. Його використовують у директивах і компонентах замість ElementRef.nativeElement, бо так код працює на різних платформах (SSR, web workers) і менш вразливий до XSS. Отримують через DI: constructor(private renderer: Renderer2) {} або inject(Renderer2).",
+      "categoryId": 1
+    },
+    {
+      "id": 78,
+      "question": "Як оптимізувати продуктивність додатка на Angular?",
+      "answer": "Основні прийоми оптимізації: стратегія OnPush і сигнали для зменшення перевірок змін; track у @for (або trackBy); lazy loading маршрутів і @defer для зменшення бандлу; pure pipes замість викликів методів у шаблоні; віртуальний скрол (cdk-virtual-scroll-viewport) для довгих списків; винесення важкої роботи з NgZone через runOutsideAngular; SSR з hydration для швидкої першої відмальовки; оптимізація зображень через NgOptimizedImage; аналіз бандлу (source-map-explorer) та профілювання через Angular DevTools.",
+      "categoryId": 1
+    },
+    {
+      "id": 79,
+      "question": "Як працювати з NgZone в Angular?",
+      "answer": "NgZone — сервіс-обгортка над Zone.js, через який Angular дізнається про завершення асинхронних операцій і запускає перевірку змін. Метод runOutsideAngular(() => ...) виконує код без запуску change detection, що корисно для частих подій (scroll, mousemove, анімації, таймери), а run(() => ...) повертає виконання в зону Angular, коли потрібно оновити представлення. NgZone також надає події onStable і onMicrotaskEmpty.",
+      "categoryId": 1
+    },
+    {
+      "id": 80,
+      "question": "Що таке Angular Universal і як його використовувати?",
+      "answer": "Angular Universal — технологія серверного рендерингу (SSR): сторінки рендеряться на Node.js-сервері й надходять у браузер уже як готовий HTML. Це покращує SEO, превʼю в соцмережах і швидкість першої відмальовки. З Angular 17 Universal інтегровано в пакет @angular/ssr: SSR вмикається через ng new --ssr або ng add @angular/ssr. Також підтримується пререндеринг статичних маршрутів під час збірки.",
+      "categoryId": 1
+    },
+    {
+      "id": 81,
+      "question": "Що таке Ahead-of-Time (AOT) компіляція?",
+      "answer": "AOT (Ahead-of-Time) — компіляція шаблонів і компонентів у JavaScript під час збірки, а не в браузері (як у JIT). Браузер отримує вже скомпільований код, тому застосунок запускається швидше, бандл менший (компілятор не потрапляє в нього), а помилки в шаблонах виявляються ще на етапі збірки. AOT також безпечніший, бо шаблони не обробляються динамічно. З Angular 9 AOT увімкнено за замовчуванням.",
+      "categoryId": 1
+    },
+    {
+      "id": 82,
+      "question": "Як налаштувати і використовувати серверний рендеринг з Angular Universal?",
+      "answer": "В Angular 17 виконайте ng add @angular/ssr (або створіть проєкт через ng new --ssr). Буде додано server.ts з Express-сервером, app.config.server.ts з provideServerRendering() і налаштування в angular.json. Команда ng build створює браузерний і серверний бандли, після чого сервер запускають через node dist/project/server/server.mjs. Код, що звертається до window, document чи localStorage, треба виконувати лише в браузері — через isPlatformBrowser або afterNextRender.",
+      "categoryId": 1
+    },
+    {
+      "id": 83,
+      "question": "Як працює ChangeDetectorRef?",
+      "answer": "ChangeDetectorRef надає ручне керування перевіркою змін компонента: markForCheck() позначає компонент і його предків для перевірки (основний інструмент для OnPush), detectChanges() негайно перевіряє компонент і його нащадків, detach() відключає компонент від автоматичної перевірки, reattach() повертає його, а checkNoChanges() перевіряє, що нічого не змінилось. Його отримують через DI і використовують, коли дані змінюються поза звичайним потоком Angular.",
+      "categoryId": 1
+    },
+    {
+      "id": 84,
+      "question": "Як створювати та використовувати бібліотеки в Angular?",
+      "answer": "Бібліотеку створюють у workspace командою ng generate library my-lib — CLI згенерує проєкт з ng-packagr і файлом public-api.ts, у якому експортують публічний API. Збирають через ng build my-lib, а результат з dist/my-lib публікують у npm (npm publish) або підключають локально через paths у tsconfig. У бібліотеці варто робити standalone компоненти, функції provideXxx для конфігурації та вказувати Angular у peerDependencies.",
+      "categoryId": 1
+    },
+    {
+      "id": 85,
+      "question": "Що таке платформи в Angular?",
+      "answer": "Платформа в Angular визначає середовище, в якому виконується застосунок: platform-browser (звичайний браузер), platform-server (SSR на Node.js), а історично також platform-webworker. Платформа надає реалізації DOM-рендерингу, обробки подій і санітизації. Перевірити поточну платформу можна через токен PLATFORM_ID і функції isPlatformBrowser та isPlatformServer, щоб, наприклад, не звертатися до window під час серверного рендерингу.",
+      "categoryId": 1
+    },
+    {
+      "id": 86,
+      "question": "Як працювати з Web Workers в Angular?",
+      "answer": "Web Worker додається командою ng generate web-worker name — CLI створить файл воркера і налаштує tsconfig. У компоненті воркер створюють так: new Worker(new URL('./app.worker', import.meta.url)), а обмінюються даними через postMessage і onmessage. Воркери виконують важкі обчислення (обробку даних, зображень, парсинг) в окремому потоці, не блокуючи UI. Доступу до DOM у воркері немає.",
+      "categoryId": 1
+    },
+    {
+      "id": 87,
+      "question": "Як реалізувати багатомовність в Angular додатку?",
+      "answer": "Є два основні підходи. Вбудований @angular/localize: тексти позначають атрибутом i18n у шаблонах і $localize у коді, витягують у файли перекладів командою ng extract-i18n і збирають окрему версію застосунку для кожної мови (переклад під час збірки). Бібліотеки на кшталт Transloco чи ngx-translate завантажують JSON-переклади під час виконання і дозволяють перемикати мову без перезавантаження. Також варто налаштувати локаль для пайпів date, number і currency через LOCALE_ID.",
+      "categoryId": 1
+    },
+    {
+      "id": 88,
+      "question": "Що таке Service Workers і як їх використовувати в Angular?",
+      "answer": "Service Worker — скрипт, який браузер запускає у фоні окремо від сторінки. Він може перехоплювати мережеві запити, кешувати ресурси, отримувати push-повідомлення і забезпечувати роботу офлайн. В Angular використовують готовий @angular/service-worker: ng add @angular/pwa додає конфігурацію ngsw-config.json і реєстрацію через provideServiceWorker. Сервіси SwUpdate і SwPush дозволяють керувати оновленнями та push-повідомленнями.",
+      "categoryId": 1
+    },
+    {
+      "id": 89,
+      "question": "Як працювати з інтерналізацією (i18n) в Angular?",
+      "answer": "Інтернаціоналізація (i18n) — підготовка застосунку до різних мов і регіонів. В Angular тексти в шаблонах позначають атрибутом i18n (з описом і id), атрибути — через i18n-title, а тексти в коді — через $localize. Командою ng extract-i18n створюють файл повідомлень (XLIFF, JSON), перекладають його, а в angular.json налаштовують локалі; ng build --localize створює окрему збірку для кожної мови. Пайпи date, number, currency форматують значення відповідно до локалі.",
+      "categoryId": 1
+    },
+    {
+      "id": 90,
+      "question": "Як реалізувати Dynamic Components в Angular?",
+      "answer": "Динамічні компоненти створюють під час виконання. Найпростіше — директива ngComponentOutlet: ng-container з *ngComponentOutlet=\"component; inputs: data\". Програмно це робиться через ViewContainerRef.createComponent(MyComponent), після чого можна встановити входи через componentRef.setInput('name', value) і видалити через destroy(). Такий підхід використовують для модалок, віджетів, конструкторів форм і плагінів. Для відкладеного завантаження компонента його імпортують через import().",
+      "categoryId": 1
+    },
+    {
+      "id": 91,
+      "question": "Що таке ElementRef і як його використовувати?",
+      "answer": "ElementRef — обгортка над нативним DOM-елементом, доступ до якого надає властивість nativeElement. Його отримують через DI у директиві чи компоненті (посилання на хост-елемент) або через @ViewChild('ref'). Прямі маніпуляції через nativeElement варто мінімізувати: вони не працюють при SSR і можуть створити XSS-вразливість. Для змін DOM краще використовувати Renderer2, а ElementRef — для читання розмірів, фокусу чи інтеграції зі сторонніми бібліотеками.",
+      "categoryId": 1
+    },
+    {
+      "id": 92,
+      "question": "Як працювати з NgModules?",
+      "answer": "NgModule групує компоненти, директиви та пайпи (declarations), підключає інші модулі (imports), робить частину коду доступною зовні (exports) і реєструє сервіси (providers). Кореневий AppModule запускається через bootstrapModule, а функціональні модулі можна завантажувати ліниво через loadChildren. Для сервісів із конфігурацією використовують патерн forRoot і forChild. У нових проєктах модулі здебільшого замінено standalone компонентами, але їх досі зустрічають у великих кодових базах.",
+      "categoryId": 1
+    },
+    {
+      "id": 93,
+      "question": "Що таке Angular Schematics?",
+      "answer": "Schematics — шаблони-генератори коду, які створюють або змінюють файли проєкту за правилами. Саме їх запускають команди ng generate (компоненти, сервіси), ng add (встановлення й налаштування бібліотек, наприклад ng add @angular/material) та ng update (автоматичні міграції під нову версію). Можна писати власні schematics через пакет @angular-devkit/schematics, щоб стандартизувати структуру коду в команді.",
+      "categoryId": 1
+    },
+    {
+      "id": 94,
+      "question": "Що таке Angular CDK?",
+      "answer": "Angular CDK (Component Dev Kit) — набір низькорівневих інструментів для створення власних компонентів без прив’язки до конкретного дизайну. Він містить модулі для overlay (спливаючі вікна), drag and drop, virtual scroll, a11y (фокус, клавіатурна навігація), portal, table, tree, stepper, clipboard, layout (BreakpointObserver) та інші. Саме на CDK побудовано Angular Material, але CDK можна використовувати окремо зі своїм дизайном.",
+      "categoryId": 1
+    },
+    {
+      "id": 95,
+      "question": "Як використовувати Angular CDK для створення власних компонентів?",
+      "answer": "CDK дає поведінку, а розмітку і стилі ви пишете самі. Наприклад, для власного dropdown використовують Overlay з @angular/cdk/overlay для позиціонування, A11yModule (FocusTrap, ListKeyManager) для клавіатурної навігації та доступності, а BreakpointObserver — для адаптивності. Для власної таблиці — CdkTable, для перетягування — DragDropModule. Так ви отримуєте перевірену логіку доступності й позиціонування з повністю власним дизайном.",
+      "categoryId": 1
+    },
+    {
+      "id": 96,
+      "question": "Як реалізувати Drag-and-Drop за допомогою Angular CDK?",
+      "answer": "Імпортуйте DragDropModule (або директиви CdkDropList і CdkDrag) з @angular/cdk/drag-drop. Позначте контейнер директивою cdkDropList, а елементи — cdkDrag, і обробіть подію (cdkDropListDropped)=\"drop($event)\", де за допомогою moveItemInArray(items, event.previousIndex, event.currentIndex) змінюється порядок. Для перенесення між списками використовують cdkDropListConnectedTo і функцію transferArrayItem. Також доступні обмеження осі (cdkDragLockAxis), ручки перетягування і власні превʼю.",
+      "categoryId": 1
+    },
+    {
+      "id": 97,
+      "question": "Що таке Reactive Forms у Angular?",
+      "answer": "Reactive Forms — модельно-орієнтований підхід до форм: структуру форми описують у класі компонента через FormControl, FormGroup і FormArray, а шаблон лише прив’язується до неї через [formGroup] і formControlName. Перевага в повному контролі з коду: синхронна модель, легке тестування, динамічна зміна полів і валідаторів, реактивні потоки valueChanges і statusChanges. З Angular 14 форми строго типізовані. Для роботи потрібен ReactiveFormsModule.",
+      "categoryId": 1
+    },
+    {
+      "id": 98,
+      "question": "Як працювати з Dynamic Forms у Angular?",
+      "answer": "Динамічні форми будуються з конфігурації (наприклад, JSON з сервера), а не описуються вручну. Зазвичай описують модель поля (тип, ключ, підпис, валідатори), на її основі в циклі створюють FormGroup з FormControl, а в шаблоні через @for і @switch рендерять відповідні поля. Для списків змінної довжини використовують FormArray, поля додають і видаляють методами addControl і removeControl. Для складних випадків є бібліотеки на кшталт Formly.",
+      "categoryId": 1
+    },
+    {
+      "id": 99,
+      "question": "Що таке FormArray у Angular?",
+      "answer": "FormArray — контейнер для змінної кількості контролів, адресованих за індексом. Наприклад, список телефонів: phones = new FormArray([new FormControl('')]). Елементи додають через push, видаляють через removeAt і отримують через at(i). У шаблоні використовують formArrayName=\"phones\" і в циклі [formControlName]=\"i\" (або formGroupName для груп). FormArray має спільне для всіх елементів значення, валідність і може мати власні валідатори, наприклад мінімальну кількість елементів.",
+      "categoryId": 1
+    },
+    {
+      "id": 100,
+      "question": "Як налаштувати асинхронну валідацію форм у Angular?",
+      "answer": "Асинхронний валідатор — це функція типу AsyncValidatorFn, що приймає контрол і повертає Observable чи Promise з ValidationErrors або null. Наприклад, перевірка, чи зайнятий email: control => userService.checkEmail(control.value).pipe(map(taken => taken ? { emailTaken: true } : null)). Його передають третім аргументом FormControl або в опції asyncValidators. Поки валідатор працює, статус контролу PENDING; для зменшення кількості запитів використовують updateOn: 'blur' або debounce.",
+      "categoryId": 1
+    },
+    {
+      "id": 101,
+      "question": "Як працює Virtual Scrolling у Angular CDK?",
+      "answer": "Virtual scrolling рендерить лише ті елементи списку, які зараз видно на екрані, плюс невеликий буфер, а не тисячі DOM-вузлів одразу. У CDK це компонент cdk-virtual-scroll-viewport з фіксованою висотою елемента [itemSize] і директивою *cdkVirtualFor замість *ngFor. При прокручуванні елементи перевикористовуються, тому пам’ять і час рендеру залишаються сталими. Для ефективної роботи потрібна відома (бажано однакова) висота елементів.",
+      "categoryId": 1
+    },
+    {
+      "id": 102,
+      "question": "Що таке Portal та PortalHost у Angular CDK?",
+      "answer": "Portal — це частина UI (компонент або шаблон), яку можна динамічно відрендерити в іншому місці DOM. ComponentPortal обгортає компонент, TemplatePortal — ng-template, DomPortal — існуючий DOM-елемент. PortalOutlet (раніше PortalHost) — це місце, куди портал вставляється, наприклад директива cdkPortalOutlet або DomPortalOutlet. На порталах побудовано Overlay, діалоги та спливаючі меню в Angular Material.",
+      "categoryId": 1
+    },
+    {
+      "id": 103,
+      "question": "Як використовувати Tree компоненти з Angular CDK?",
+      "answer": "CDK Tree (cdk-tree) відображає ієрархічні дані з повним контролем над розміткою. Ви визначаєте вузли через ng-template з директивою cdkTreeNodeDef (з окремими варіантами для вузлів з дочірніми елементами), передаєте dataSource і спосіб отримання дітей — childrenAccessor (у нових версіях) або treeControl (NestedTreeControl чи FlatTreeControl). Кнопка з cdkTreeNodeToggle розгортає й згортає вузли. Готова стилізована версія — mat-tree з Angular Material.",
+      "categoryId": 1
+    },
+    {
+      "id": 104,
+      "question": "Як налаштувати серверний рендеринг у Angular Universal?",
+      "answer": "У Angular 17 серверний рендеринг вмикається командою ng add @angular/ssr (раніше пакет називався @nguniversal/express-engine). Створюються server.ts з Express-сервером і CommonEngine, app.config.server.ts з provideServerRendering() і налаштування в angular.json. Додатково рекомендовано ввімкнути provideClientHydration() для повторного використання серверного DOM. Застосунок збирають через ng build і запускають серверний файл через node; браузерний код слід захищати перевірками платформи.",
+      "categoryId": 1
+    },
+    {
+      "id": 105,
+      "question": "Що таке Hydration у Angular?",
+      "answer": "Hydration — процес, коли браузер не перестворює DOM, згенерований на сервері, а «оживляє» його: прив’язує обробники подій і стан Angular до вже наявних елементів. Це прибирає миготіння і покращує метрики LCP та CLS. Вмикається через provideClientHydration() (стабільно з Angular 17). Для коректної роботи серверний і клієнтський DOM мають збігатися, тому не варто напряму змінювати DOM; проблемні компоненти можна виключити атрибутом ngSkipHydration.",
+      "categoryId": 1
+    },
+    {
+      "id": 106,
+      "question": "Як працювати з новими lifecycle hooks у Angular Universal?",
+      "answer": "У контексті SSR важливі хуки afterRender і afterNextRender (з’явились в Angular 16.2): вони викликаються лише в браузері після рендеру й ніколи не виконуються на сервері. afterNextRender спрацьовує один раз — ідеально для ініціалізації сторонніх бібліотек, роботи з window, localStorage чи вимірювання DOM. afterRender викликається після кожної перевірки змін. Їх реєструють у конструкторі або в контексті інжекції, і вони замінюють ручні перевірки isPlatformBrowser.",
+      "categoryId": 1
+    },
+    {
+      "id": 107,
+      "question": "Як використовувати Vite та ESBuild у нових проектах Angular?",
+      "answer": "З Angular 17 нові проєкти за замовчуванням використовують application builder (@angular-devkit/build-angular:application), який збирає код через esbuild, а dev-сервер ng serve працює на Vite. Нічого окремо налаштовувати не потрібно — збірка значно швидша, ніж з webpack. Старі проєкти можна перевести, змінивши builder в angular.json (або через ng update), при цьому варто перевірити кастомні налаштування webpack, бо вони не підтримуються.",
+      "categoryId": 1
+    },
+    {
+      "id": 108,
+      "question": "Як відлагоджувати Dependency Injection у Angular DevTools?",
+      "answer": "Angular DevTools — розширення для Chrome і Firefox, що показує дерево компонентів, їхні входи, виходи та стан, а також має профайлер перевірки змін. Починаючи з Angular 17 у ньому з’явилась вкладка Injector Tree, яка показує ієрархію інжекторів (environment і element) та провайдери. Для обраного компонента видно, з якого інжектора отримано кожну залежність і шлях її пошуку, що допомагає розібратися з помилками на кшталт NullInjectorError чи дубльованими екземплярами сервісів.",
+      "categoryId": 1
+    },
+    {
+      "id": 109,
+      "question": "Як використовувати Standalone API у Angular?",
+      "answer": "Standalone API включає standalone компоненти, директиви й пайпи, запуск застосунку без модуля через bootstrapApplication(AppComponent, appConfig) і функції-провайдери замість модулів: provideRouter, provideHttpClient, provideAnimations, provideStore тощо. Маршрути підтримують loadComponent і loadChildren з масивом Routes, а провайдери можна вказувати прямо на маршруті. Існуючий модульний проєкт мігрують командою ng generate @angular/core:standalone.",
+      "categoryId": 1
+    },
+    {
+      "id": 110,
+      "question": "Що таке Signal-based Components у Angular?",
+      "answer": "Signal-based компоненти — напрям розвитку Angular, де стан, входи й запити до представлення компонента реалізовані через сигнали. В Angular 17 з’явились сигнальні функції input() (17.1), model() (17.2), output() і viewChild(), viewChildren(), contentChild() (17.2–17.3), які повертають сигнали замість звичайних властивостей. Такі компоненти разом із OnPush (а згодом і без Zone.js) дозволяють оновлювати лише ті частини представлення, що залежать від змінених сигналів.",
+      "categoryId": 1
+    },
+    {
+      "id": 111,
+      "question": "Як використовувати новий синтаксис @if з Reactive Forms?",
+      "answer": "@if зручно використовувати для відображення помилок і умовних полів у reactive формах: @if (form.controls.email.invalid && form.controls.email.touched) { показати помилку }. Можна перевіряти конкретні помилки: @if (email.hasError('required')) { ... } @else if (email.hasError('email')) { ... }. Для умовних секцій форми поле додають або видаляють з FormGroup в коді (або вимикають через disable), а @if лише керує відображенням.",
+      "categoryId": 1
+    },
+    {
+      "id": 112,
+      "question": "Як оптимізувати продуктивність за допомогою @defer?",
+      "answer": "@defer дозволяє не завантажувати важкі компоненти та бібліотеки (графіки, редактори, карти) у початковому бандлі. Найкращі практики: відкладати контент нижче першого екрана через on viewport, другорядні віджети — через on idle або on timer, інтерактивні елементи — через on interaction або on hover; використовувати prefetch для завантаження коду заздалегідь; додавати легкі @placeholder і @loading з minimum, щоб уникнути стрибків верстки. Не варто обгортати в @defer контент першого екрана, бо це погіршить LCP.",
+      "categoryId": 1
+    },
+    {
+      "id": 113,
+      "question": "Як реалізувати серверний рендеринг з Angular SSR?",
+      "answer": "SSR в Angular 17 вмикається через ng new my-app --ssr або ng add @angular/ssr для існуючого проєкту. Це додає server.ts, app.config.server.ts з provideServerRendering() і provideClientHydration() у клієнтську конфігурацію. Збірка ng build створює браузерну і серверну частини, а npm run serve:ssr запускає Express-сервер. Для статичних сторінок можна ввімкнути пререндеринг (prerender в angular.json), а для запобігання повторним HTTP-запитам після гідратації використовується HTTP transfer cache.",
+      "categoryId": 1
+    },
+    {
+      "id": 114,
+      "question": "Що таке Prefetch у @defer?",
+      "answer": "Prefetch дозволяє завантажити код відкладеного блоку заздалегідь, до того, як спрацює основний тригер показу. Наприклад, @defer (on interaction; prefetch on idle) завантажує chunk, коли браузер вільний, а показує вміст лише після кліку — тож для користувача контент з’являється миттєво. Для prefetch доступні ті самі тригери (on idle, on viewport, on hover, on timer) і умова prefetch when.",
+      "categoryId": 1
+    },
+    {
+      "id": 115,
+      "question": "Як працювати з Vite та ESBuild у нових проектах Angular?",
+      "answer": "У новому проєкті Angular 17 нічого робити не потрібно: ng build використовує esbuild, а ng serve — Vite з попереднім збиранням залежностей. Варто знати, що кастомні webpack-конфігурації не підтримуються, глобальні скрипти й стилі задаються в angular.json, а результат збірки складається в dist/project/browser. Для старого проєкту змініть builder на @angular-devkit/build-angular:application і перевірте сумісність бібліотек, які покладались на webpack.",
+      "categoryId": 1
+    },
+    {
+      "id": 116,
+      "question": "Як використовувати новий синтаксис @switch з Angular?",
+      "answer": "@switch використовують для вибору одного з кількох варіантів відображення: @switch (status()) { @case ('loading') { спінер } @case ('error') { помилка } @case ('success') { дані } @default { порожній стан } }. Він підходить для станів запиту, ролей користувача, типів полів у динамічних формах. Значення порівнюються строго через ===, а @default спрацьовує, якщо збігу не знайдено.",
+      "categoryId": 1
+    },
+    {
+      "id": 117,
+      "question": "Як реалізувати Deferrable Views у великому Angular проекті?",
+      "answer": "У великому проєкті спочатку аналізують бандл (source-map-explorer, статистика esbuild) і знаходять важкі частини, не потрібні при першому рендері: графіки, редактори, модалки, коментарі, віджети нижче першого екрана. Їх обгортають у @defer з відповідним тригером і prefetch, додають легкі @placeholder без стрибків верстки. Компоненти всередині мають бути standalone і не використовуватись поза @defer у тому самому шаблоні. Після змін вимірюють результат через Lighthouse і Web Vitals.",
+      "categoryId": 1
+    },
+    {
+      "id": 118,
+      "question": "Як налаштувати Prefetch для покращення продуктивності?",
+      "answer": "Prefetch налаштовується в самому блоці @defer через ключове слово prefetch: @defer (on viewport; prefetch on idle) завантажить код, щойно браузер вільний, а покаже вміст при появі в області видимості. Для елементів, з якими взаємодіють, зручно використовувати @defer (on interaction; prefetch on hover). Для маршрутів аналогом є стратегія попереднього завантаження: withPreloading(PreloadAllModules) у provideRouter або власна PreloadingStrategy.",
+      "categoryId": 1
+    },
+    {
+      "id": 119,
+      "question": "Що таке стабільні сигнали у Angular 17?",
+      "answer": "В Angular 17 основні примітиви сигналів — signal() і computed() — стали стабільними (вийшли з developer preview), а effect() поки залишився в developer preview. Сигнал — це реактивне значення: читається викликом count(), змінюється через set() або update(), а computed створює похідне значення, яке перераховується лише при зміні залежностей. Сигнали, прочитані в шаблоні, автоматично позначають компонент для перевірки змін, навіть з OnPush.",
+      "categoryId": 1
+    },
+    {
+      "id": 120,
+      "question": "Як використовувати Prefetch з @defer?",
+      "answer": "Prefetch додають після основного тригера через крапку з комою: @defer (on interaction; prefetch on idle) { редактор } @placeholder { кнопка «Редагувати» }. Також можна використати умову: @defer (when isOpen; prefetch when userIsLoggedIn). Prefetch лише завантажує JavaScript-код залежностей, а рендер відбувається при спрацюванні основного тригера.",
+      "categoryId": 1
+    },
+    {
+      "id": 121,
+      "question": "Як використовувати Standalone компоненти для спрощення архітектури?",
+      "answer": "Standalone компоненти дозволяють позбутися шарів NgModule (shared, core, feature-модулі), бо кожен компонент сам імпортує свої залежності. Архітектуру будують навколо фіч: у папці фічі лежать компоненти, сервіси і файл маршрутів, який підключають через loadChildren. Глобальні налаштування задають в ApplicationConfig через provideXxx(), а провайдери, специфічні для фічі, вказують на маршруті. Це зменшує зв’язність, спрощує lazy loading і рефакторинг.",
+      "categoryId": 1
+    },
+    {
+      "id": 122,
+      "question": "Як реалізувати новий синтаксис @for для покращення продуктивності?",
+      "answer": "У @for обов’язково вказують ефективний track — унікальний стабільний ідентифікатор: @for (user of users; track user.id). Тоді при оновленні масиву Angular переміщує й оновлює наявні DOM-вузли замість перестворення. track $index підходить лише для статичних списків, а track item (за посиланням) — коли об’єкти не перестворюються. Для порожніх списків використовують @empty, а для дуже довгих — поєднують із віртуальним скролом CDK.",
+      "categoryId": 1
+    },
+    {
+      "id": 123,
+      "question": "Як працювати з новими Standalone API у Angular?",
+      "answer": "Нові Standalone API використовують так: застосунок запускають через bootstrapApplication(AppComponent, appConfig), де appConfig містить providers: [provideRouter(routes), provideHttpClient(withInterceptors([...])), provideAnimationsAsync()]. Маршрути підключають компоненти ліниво через loadComponent, а функціональні guards, resolvers та інтерцептори пишуть як функції з inject(). Компоненти імпортують лише потрібне, наприклад RouterLink замість цілого RouterModule.",
+      "categoryId": 1
+    },
+    {
+      "id": 124,
+      "question": "Що таке Signal-based state management у Angular?",
+      "answer": "Сигнальне керування станом — підхід, коли стан зберігається в сигналах усередині сервісу: приватний writable signal, публічний read-only через asReadonly(), похідні дані через computed() і методи для зміни стану через set або update. Компоненти читають сигнали в шаблонах, і Angular точково оновлює представлення. Для інтеграції з HTTP і RxJS використовують toSignal і toObservable, а для великих застосунків є готове рішення NgRx SignalStore.",
+      "categoryId": 1
+    },
+    {
+      "id": 125,
+      "question": "Як використовувати новий синтаксис @if з асинхронними даними?",
+      "answer": "Найпростіше поєднувати @if з async pipe: @if (user$ | async; as user) { {{ user.name }} } @else { завантаження }. Сучасніший варіант — перетворити Observable на сигнал через toSignal(user$) і писати @if (user(); as user) { ... }. Варто пам’ятати, що значення 0 чи порожній рядок теж вважаються хибними, тому для явного стану завантаження краще мати окремий прапорець або обгортку з полями loading, data, error.",
+      "categoryId": 1
+    },
+    {
+      "id": 126,
+      "question": "Як реалізувати Prefetch з умовами @if у Angular?",
+      "answer": "Prefetch з умовою задається через prefetch when: @defer (when showDetails; prefetch when userHovered) { деталі }. Якщо блок має з’являтися лише за певної умови, @if обгортає @defer: @if (isPremium) { @defer (on viewport; prefetch on idle) { преміум-віджет } }. Так код завантажується тільки для тих користувачів, яким він справді потрібен, і заздалегідь, коли браузер вільний.",
+      "categoryId": 1
+    },
+    {
+      "id": 127,
+      "question": "Що таке TypeScript?",
+      "answer": "TypeScript — це надмножина JavaScript, яка додає статичну типізацію та інші можливості, такі як інтерфейси, дженеріки, модулі та підтримку сучасних функцій JavaScript. TypeScript компілюється у чистий JavaScript, що дозволяє виконувати код на будь-якій платформі, яка підтримує JavaScript. Основна мета TypeScript — поліпшення інструментів для розробників за рахунок надання потужної системи типів, що допомагає уникати помилок під час написання коду та покращує його зрозумілість.",
+      "categoryId": 2
+    },
+    {
+      "id": 128,
+      "question": "Яка основна різниця між TypeScript і JavaScript?",
+      "answer": "Основна різниця між TypeScript і JavaScript полягає в тому, що TypeScript додає статичну типізацію. У JavaScript типи визначаються динамічно під час виконання, тоді як у TypeScript типи визначаються на етапі розробки. Це дозволяє виявляти помилки на ранніх етапах і забезпечує кращу підтримку інструментів розробки, таких як автодоповнення та рефакторинг. Крім того, TypeScript підтримує сучасні функції JavaScript та надає додаткові можливості, такі як інтерфейси, дженеріки та декоратори.",
+      "categoryId": 2
+    },
+    {
+      "id": 129,
+      "question": "Як встановити TypeScript?",
+      "answer": "Для встановлення TypeScript необхідно мати встановлений Node.js та npm. Після цього можна відкрити командний рядок і виконати команду npm install -g typescript, яка встановить TypeScript глобально на вашій системі. Це дозволить використовувати команду tsc для компіляції TypeScript файлів у JavaScript. Також можна додати TypeScript як залежність у проекті, використовуючи команду npm install --save-dev typescript.",
+      "categoryId": 2
+    },
+    {
+      "id": 130,
+      "question": "Як компілювати TypeScript у JavaScript?",
+      "answer": "Для компіляції TypeScript у JavaScript використовується команда tsc, яка запускає компілятор TypeScript. Наприклад, щоб скомпілювати файл example.ts, виконайте команду tsc example.ts. Це створить файл example.js з скомпільованим кодом. Також можна налаштувати конфігураційний файл tsconfig.json, який містить параметри компіляції та перелік файлів для компіляції. Команда tsc без параметрів скомпілює всі файли, визначені у tsconfig.json.",
+      "categoryId": 2
+    },
+    {
+      "id": 131,
+      "question": "Що таке типи в TypeScript?",
+      "answer": "Типи в TypeScript — це визначення, які дозволяють вказати, які значення можуть бути присвоєні змінним, параметрам функцій або властивостям об’єктів. Основні типи включають примітивні типи (number, string, boolean), спеціальні типи (any, void, null, undefined), складені типи (arrays, tuples) та об’єктні типи (interfaces, classes). Використання типів допомагає уникати помилок, забезпечує автодоповнення і покращує документацію коду.",
+      "categoryId": 2
+    },
+    {
+      "id": 132,
+      "question": "Як оголосити змінну з типом у TypeScript?",
+      "answer": "Тип вказується після імені змінної через двокрапку: let age: number = 30; const name: string = 'Іван'; let tags: string[] = []. Якщо змінну одразу ініціалізують, TypeScript виведе тип сам (type inference), тому явна анотація потрібна переважно для змінних без початкового значення, параметрів функцій і публічних API. Для констант з літеральним значенням виводиться літеральний тип, наприклад const mode = 'dark' має тип 'dark'.",
+      "categoryId": 2
+    },
+    {
+      "id": 133,
+      "question": "Що таке інтерфейс у TypeScript?",
+      "answer": "Інтерфейс описує форму об’єкта — набір властивостей і методів з їхніми типами — і використовується лише на етапі компіляції (у JavaScript-коді його немає). Інтерфейси можуть мати необов’язкові властивості (?), властивості лише для читання (readonly), сигнатури індексу та методів. Їх можна розширювати через extends, реалізовувати в класах через implements і доповнювати повторним оголошенням (declaration merging).",
+      "categoryId": 2
+    },
+    {
+      "id": 134,
+      "question": "Як створити інтерфейс у TypeScript?",
+      "answer": "Інтерфейс оголошують ключовим словом interface: interface User { id: number; name: string; email?: string; readonly createdAt: Date; greet(): string; }. Після цього його використовують як тип: const user: User = { ... }, у параметрах функцій, у дженериках чи як контракт для класу (class Admin implements User). Компілятор перевірить, що об’єкт містить усі обов’язкові поля правильних типів.",
+      "categoryId": 2
+    },
+    {
+      "id": 135,
+      "question": "Що таке Union типи у TypeScript?",
+      "answer": "Union тип описує значення, яке може бути одним із кількох типів, і записується через вертикальну риску: let id: number | string; type Status = 'loading' | 'success' | 'error'. Працювати з таким значенням можна лише через спільні для всіх варіантів члени або після звуження типу (typeof, in, instanceof, перевірка дискримінанта). Union з літеральних типів — зручна і безпечна альтернатива enum.",
+      "categoryId": 2
+    },
+    {
+      "id": 136,
+      "question": "Як використовувати тип any у TypeScript?",
+      "answer": "Тип any вимикає перевірку типів: такій змінній можна присвоїти будь-що і викликати на ній будь-які методи без помилок компіляції. Його використовують як тимчасовий крок під час міграції з JavaScript або для справді невідомих даних, але зловживати ним не варто, бо втрачаються всі переваги TypeScript. Безпечнішою альтернативою є unknown, який вимагає перевірити тип перед використанням. Опція noImplicitAny забороняє неявний any.",
+      "categoryId": 2
+    },
+    {
+      "id": 137,
+      "question": "Що таке Enum у TypeScript?",
+      "answer": "Enum — іменований набір констант. Числові enum отримують значення 0, 1, 2 за замовчуванням (enum Direction { Up, Down }), рядкові вимагають явних значень (enum Role { Admin = 'ADMIN', User = 'USER' }). На відміну від більшості конструкцій TypeScript, enum існує і в JavaScript як об’єкт. Числові enum підтримують зворотне відображення, а const enum повністю вбудовується в код при компіляції.",
+      "categoryId": 2
+    },
+    {
+      "id": 138,
+      "question": "Як використовувати Enum у TypeScript?",
+      "answer": "Enum оголошують і використовують як тип та значення: enum Status { Active = 'active', Blocked = 'blocked' }; function setStatus(s: Status) {}; setStatus(Status.Active). Його зручно використовувати в switch, порівняннях і для опису фіксованого набору станів. Для ітерації по значеннях використовують Object.values(Status). Багато команд замість enum обирають union літеральних типів або об’єкт з as const, бо вони простіші й не генерують додаткового коду.",
+      "categoryId": 2
+    },
+    {
+      "id": 139,
+      "question": "Що таке tuple у TypeScript?",
+      "answer": "Tuple (кортеж) — масив фіксованої довжини, де кожна позиція має свій тип: let point: [number, number] = [10, 20]; let entry: [string, number] = ['age', 30]. Кортежі можуть мати необов’язкові елементи ([string, number?]), rest-елементи ([string, ...number[]]) і мітки ([x: number, y: number]). Їх часто використовують для повернення кількох значень з функції, як у хуках React чи Object.entries.",
+      "categoryId": 2
+    },
+    {
+      "id": 140,
+      "question": "Як оголосити та використовувати tuple?",
+      "answer": "Кортеж оголошують через перелік типів у квадратних дужках: const user: [number, string] = [1, 'Анна']. Елементи читають за індексом або деструктуризацією: const [id, name] = user, і TypeScript знає тип кожного з них. Для захисту від змін використовують readonly [number, string]. Щоб літерал масиву вивівся як кортеж, а не як масив, можна додати as const.",
+      "categoryId": 2
+    },
+    {
+      "id": 141,
+      "question": "Що таке типи функцій у TypeScript?",
+      "answer": "Тип функції описує типи її параметрів і значення, що повертається. Його записують стрілковим синтаксисом: type Handler = (event: string, payload: number) => void, або через сигнатуру виклику в інтерфейсі: interface Handler { (event: string): void }. Функціональні типи використовують для колбеків, обробників подій і параметрів функцій вищого порядку. TypeScript перевіряє сумісність кількості та типів параметрів при присвоєнні.",
+      "categoryId": 2
+    },
+    {
+      "id": 142,
+      "question": "Як оголосити функцію з типом у TypeScript?",
+      "answer": "Параметри та значення, що повертається, анотують явно: function sum(a: number, b: number): number { return a + b; }. Для стрілкових функцій: const greet = (name: string): string => `Привіт, ${name}`. Підтримуються необов’язкові параметри (name?: string), параметри за замовчуванням (count = 1), rest-параметри (...items: number[]) і перевантаження — кілька сигнатур перед реалізацією.",
+      "categoryId": 2
+    },
+    {
+      "id": 143,
+      "question": "Що таке Generics у TypeScript?",
+      "answer": "Generics (узагальнення) дозволяють писати код, що працює з різними типами, зберігаючи інформацію про конкретний тип. Параметр типу пишеться в кутових дужках: function identity<T>(value: T): T { return value; }. Дженерики використовують у функціях, класах, інтерфейсах і типах — наприклад, Array<T>, Promise<T>, Observable<T> в RxJS, ResponseArray<T> у цьому застосунку. Обмеження задаються через extends: <T extends { id: number }>.",
+      "categoryId": 2
+    },
+    {
+      "id": 144,
+      "question": "Як використовувати Generics у TypeScript?",
+      "answer": "Параметр типу оголошують у кутових дужках після імені і використовують у сигнатурі: function first<T>(items: T[]): T | undefined { return items[0]; }. Під час виклику тип зазвичай виводиться автоматично: first([1, 2, 3]) поверне number | undefined. Обмеження задають через extends (<T extends object>), значення за замовчуванням — через <T = string>, кілька параметрів — через кому (<K, V>). Для класів: class Store<T> { items: T[] = []; }.",
+      "categoryId": 2
+    },
+    {
+      "id": 145,
+      "question": "Що таке void у TypeScript?",
+      "answer": "void означає, що функція не повертає значення (або повертає undefined): function log(message: string): void { console.log(message); }. Це тип за замовчуванням для функцій без return. Важлива особливість: якщо тип колбеку оголошено як () => void, йому можна передати функцію, яка щось повертає, — результат просто ігнорується, тому arr.forEach(x => list.push(x)) компілюється без помилок.",
+      "categoryId": 2
+    },
+    {
+      "id": 146,
+      "question": "Як використовувати тип void у TypeScript?",
+      "answer": "void вказують як тип значення, що повертається, для функцій, які виконують дію без результату: обробники подій, логування, setter-подібні методи. Також void використовують у типах колбеків: onClick: () => void, і в дженериках: Observable з void для потоків-сигналів без даних, Promise з void для асинхронних функцій без результату. Змінним тип void майже ніколи не присвоюють, бо йому відповідає лише undefined.",
+      "categoryId": 2
+    },
+    {
+      "id": 147,
+      "question": "Що таке never у TypeScript?",
+      "answer": "never — тип значень, які ніколи не виникають. Його мають функції, що ніколи не завершуються нормально (завжди кидають помилку або містять нескінченний цикл), а також змінні в гілці, де всі варіанти union вже вичерпано. never є підтипом будь-якого типу, але жоден тип, крім самого never, не присвоюється йому. В умовних типах never використовують для фільтрації: він зникає з union.",
+      "categoryId": 2
+    },
+    {
+      "id": 148,
+      "question": "Як використовувати тип never у TypeScript?",
+      "answer": "Основне застосування — перевірка вичерпності (exhaustive check): у default гілці switch по union присвоюють значення змінній типу never, і якщо в union додадуть новий варіант без обробки, компілятор видасть помилку. Також never вказують як тип функцій, що завжди кидають виняток: function fail(msg: string): never { throw new Error(msg); }. В утилітних типах never використовують для виключення варіантів, як в Exclude.",
+      "categoryId": 2
+    },
+    {
+      "id": 149,
+      "question": "Що таке типи масивів у TypeScript?",
+      "answer": "Масиви типізують двома рівноцінними способами: number[] або Array<number>. Для масивів змішаних типів використовують union: (string | number)[]. Масиви лише для читання позначають readonly string[] або ReadonlyArray<string> — на них заборонені push, splice та інші мутуючі методи. Від масивів слід відрізняти кортежі ([string, number]), де довжина і тип кожної позиції фіксовані.",
+      "categoryId": 2
+    },
+    {
+      "id": 150,
+      "question": "Як оголосити та використовувати масиви у TypeScript?",
+      "answer": "Масив оголошують з типом елементів: const ids: number[] = [1, 2, 3]; const users: User[] = []. TypeScript перевіряє типи при додаванні (ids.push('a') дасть помилку) і правильно виводить типи в методах map, filter, reduce. Для фільтрації з звуженням типу використовують type predicate: items.filter((x): x is string => typeof x === 'string'). Порожній масив без анотації може отримати тип any[] або never[], тому його варто типізувати явно.",
+      "categoryId": 2
+    },
+    {
+      "id": 151,
+      "question": "Що таке type assertion у TypeScript?",
+      "answer": "Type assertion — вказівка компілятору вважати значення певного типу: const input = document.getElementById('name') as HTMLInputElement. Вона не змінює значення під час виконання і не робить перевірок, тож при помилці можливі runtime-помилки. Також існують non-null assertion (value!), що прибирає null і undefined, та as const для виведення найвужчих літеральних типів. Замість assertion краще використовувати type guards, коли це можливо.",
+      "categoryId": 2
+    },
+    {
+      "id": 152,
+      "question": "Що таке типова перевірка у TypeScript?",
+      "answer": "Перевірка типів у TypeScript статична — вона виконується під час компіляції, а не під час виконання, і після компіляції типи зникають. Система типів структурна: сумісність визначається формою об’єкта, а не іменем типу. Строгість налаштовується в tsconfig.json: strict вмикає strictNullChecks, noImplicitAny, strictFunctionTypes та інші перевірки. Для перевірок під час виконання (наприклад, даних з API) потрібні власні type guards або бібліотеки на кшталт zod.",
+      "categoryId": 2
+    },
+    {
+      "id": 153,
+      "question": "Як працює TypeScript з об'єктами?",
+      "answer": "Тип об’єкта описують інтерфейсом, type alias або інлайн: function print(user: { name: string; age?: number }). TypeScript перевіряє наявність обов’язкових властивостей і їхні типи, а для об’єктних літералів — ще й відсутність зайвих полів (excess property check). Підтримуються readonly та необов’язкові властивості, сигнатури індексу ([key: string]: number), Record для словників і keyof для отримання ключів. Порівняння типів структурне.",
+      "categoryId": 2
+    },
+    {
+      "id": 154,
+      "question": "Що таке розширення інтерфейсу у TypeScript?",
+      "answer": "Розширення інтерфейсу — створення нового інтерфейсу на основі існуючого через extends: interface Admin extends User { permissions: string[] }. Новий інтерфейс успадковує всі властивості базового і додає свої. Можна розширювати кілька інтерфейсів одночасно (extends A, B) і навіть розширювати type alias об’єктного типу. Це дозволяє будувати ієрархію типів без дублювання.",
+      "categoryId": 2
+    },
+    {
+      "id": 155,
+      "question": "Як реалізувати розширення інтерфейсу?",
+      "answer": "Оголошують базовий інтерфейс і розширюють його: interface Entity { id: number } і interface Product extends Entity { title: string; price: number }. Тепер об’єкт типу Product має містити і id, і поля продукту. При розширенні можна звузити тип властивості (наприклад, з string до літералу), але не змінити його на несумісний. Інший спосіб доповнити інтерфейс — повторне оголошення з тим самим іменем (declaration merging).",
+      "categoryId": 2
+    },
+    {
+      "id": 156,
+      "question": "Що таке перетин типів у TypeScript?",
+      "answer": "Перетин типів (intersection) поєднує кілька типів в один через оператор &: type AdminUser = User & { permissions: string[] }. Значення такого типу має задовольняти всім складовим одночасно. Перетин часто використовують для змішування (mixins) і додавання полів до існуючих типів. Якщо одна й та сама властивість має несумісні типи в складових, її тип стає never.",
+      "categoryId": 2
+    },
+    {
+      "id": 157,
+      "question": "Як реалізувати перетин типів?",
+      "answer": "Перетин записують через &: type Timestamped = { createdAt: Date }; type Post = { title: string } & Timestamped. Також ним поєднують дженерики: function merge з параметрами T і U приймає a: T, b: U і повертає T & U, всередині — return { ...a, ...b }. На відміну від extends в інтерфейсах, перетин працює з будь-якими типами, включно з union, але конфлікти властивостей не підсвічуються одразу, а дають never.",
+      "categoryId": 2
+    },
+    {
+      "id": 158,
+      "question": "Що таке декларація простору імен у TypeScript?",
+      "answer": "Простір імен (namespace) — механізм TypeScript для групування пов’язаного коду під одним іменем: namespace Validation { export interface Validator { ... } }. Він компілюється в об’єкт JavaScript (IIFE), а назовні доступні лише експортовані члени. Простори імен з’явились до ES-модулів і зараз використовуються рідко — переважно у файлах декларацій .d.ts для опису глобальних бібліотек. Для організації коду рекомендується використовувати модулі.",
+      "categoryId": 2
+    },
+    {
+      "id": 159,
+      "question": "Як використовувати простори імен у TypeScript?",
+      "answer": "Оголошують простір імен і експортують з нього потрібне: namespace Utils { export function format(v: number) { ... } }, а потім звертаються як Utils.format(5). Простори імен можуть бути вкладеними і розбиватися на кілька файлів. Для коротших імен використовують аліас: import F = Utils.Format. У сучасних проєктах їх застосовують здебільшого в .d.ts файлах (declare namespace) або для злиття декларацій з функціями та класами.",
+      "categoryId": 2
+    },
+    {
+      "id": 160,
+      "question": "Що таке модулі у TypeScript?",
+      "answer": "Модуль у TypeScript — це будь-який файл з import або export на верхньому рівні. Він має власну область видимості, тож його змінні не потрапляють у глобальну, а назовні доступне лише те, що експортовано. TypeScript підтримує стандартні ES-модулі і компілює їх у потрібний формат (ESNext, CommonJS) згідно з tsconfig. Модулі також можуть експортувати тільки типи (export type), які зникають після компіляції.",
+      "categoryId": 2
+    },
+    {
+      "id": 161,
+      "question": "Як експортувати та імпортувати модулі у TypeScript?",
+      "answer": "Іменований експорт: export const PI = 3.14; export interface User {}, імпорт: import { PI, User } from './math'. Експорт за замовчуванням: export default class Api {}, імпорт: import Api from './api'. Можна перейменовувати (import { User as AppUser }), імпортувати все (import * as utils from './utils') і реекспортувати (export * from './models'). Для імпорту лише типів використовують import type { User }, що гарантує видалення імпорту при компіляції.",
+      "categoryId": 2
+    },
+    {
+      "id": 162,
+      "question": "Що таке декларація змінних у TypeScript?",
+      "answer": "Змінні в TypeScript оголошують так само, як у сучасному JavaScript — через let, const і (застаріле) var, але з можливістю вказати тип: let count: number = 0. Також існує ambient-декларація declare let VERSION: string, яка лише повідомляє компілятору про змінну, що визначена деінде (наприклад, глобально через скрипт), і не генерує коду. Тип змінної фіксується при оголошенні і не може змінитися пізніше.",
+      "categoryId": 2
+    },
+    {
+      "id": 163,
+      "question": "Як використовувати ключові слова let і const у TypeScript?",
+      "answer": "let оголошує змінну з блочною областю видимості, значення якої можна змінювати. const оголошує змінну, яку не можна переприсвоїти, хоча вміст об’єкта чи масиву змінювати можна. В TypeScript для const з примітивним значенням виводиться літеральний тип (const status = 'ok' має тип 'ok'), а для let — розширений (string). Рекомендовано за замовчуванням використовувати const, а let — лише коли значення справді змінюється; var не використовувати.",
+      "categoryId": 2
+    },
+    {
+      "id": 164,
+      "question": "Що таке клас у TypeScript?",
+      "answer": "Клас — шаблон для створення об’єктів з властивостями і методами. TypeScript додає до класів JavaScript типізацію полів, модифікатори доступу (public, private, protected), readonly, абстрактні класи і методи, реалізацію інтерфейсів (implements) та параметричні властивості в конструкторі. Клас водночас створює значення (конструктор) і тип (екземпляр класу).",
+      "categoryId": 2
+    },
+    {
+      "id": 165,
+      "question": "Як оголосити клас у TypeScript?",
+      "answer": "Клас оголошують ключовим словом class: class User { name: string; private age: number; constructor(name: string, age: number) { this.name = name; this.age = age; } greet(): string { return `Привіт, ${this.name}`; } }. Екземпляр створюють через new User('Анна', 25). Клас може наслідувати інший через extends (з викликом super у конструкторі) і реалізовувати інтерфейси через implements.",
+      "categoryId": 2
+    },
+    {
+      "id": 166,
+      "question": "Що таке конструктор у класі TypeScript?",
+      "answer": "Конструктор — спеціальний метод constructor, який викликається при створенні екземпляра через new і ініціалізує його поля. У класі може бути лише одна реалізація конструктора (але можна оголосити перевантаження). У класі-нащадку конструктор має викликати super(...) до звернення до this. В Angular через параметри конструктора отримують залежності за допомогою DI.",
+      "categoryId": 2
+    },
+    {
+      "id": 167,
+      "question": "Як реалізувати конструктор у класі?",
+      "answer": "Класичний варіант: оголосити поля і присвоїти їх у конструкторі — constructor(name: string) { this.name = name; }. Скорочений варіант TypeScript — параметричні властивості: constructor(private readonly http: HttpClient, public name: string) {}, що одночасно оголошує поле й ініціалізує його. Параметри можуть мати значення за замовчуванням і бути необов’язковими. Саме параметричні властивості ми бачимо в конструкторах сервісів і компонентів Angular.",
+      "categoryId": 2
+    },
+    {
+      "id": 168,
+      "question": "Що таке методи класу у TypeScript?",
+      "answer": "Методи класу — функції, оголошені в тілі класу, які працюють з даними екземпляра через this. Вони можуть мати модифікатори доступу (public, private, protected), бути статичними (static), абстрактними (abstract) чи асинхронними (async), а також getter і setter (get fullName()). Методи зберігаються в прототипі класу, тому спільні для всіх екземплярів. Методи, оголошені як стрілкові функції в полях, мають прив’язаний this, але створюються для кожного екземпляра окремо.",
+      "categoryId": 2
+    },
+    {
+      "id": 169,
+      "question": "Як оголосити та використовувати методи класу?",
+      "answer": "Метод оголошують у тілі класу з типами параметрів і результату: class Cart { private items: Item[] = []; add(item: Item): void { this.items.push(item); } total(): number { return this.items.reduce((s, i) => s + i.price, 0); } }. Викликають через екземпляр: cart.add(item). Якщо метод передається як колбек, слід пам’ятати про втрату контексту this — тоді використовують bind або стрілкову функцію.",
+      "categoryId": 2
+    },
+    {
+      "id": 170,
+      "question": "Що таке доступ до модифікаторів у TypeScript?",
+      "answer": "Модифікатори доступу визначають, звідки можна звертатись до членів класу: public (за замовчуванням) — звідусіль; protected — з самого класу і нащадків; private — лише всередині класу. Ці модифікатори перевіряються тільки під час компіляції. Для справжньої приватності під час виконання використовують JavaScript-синтаксис #field. Також є readonly, що забороняє змінювати поле після ініціалізації.",
+      "categoryId": 2
+    },
+    {
+      "id": 171,
+      "question": "Як використовувати приватні та публічні модифікатори доступу?",
+      "answer": "Модифікатор пишуть перед членом класу: class Account { public owner: string; private balance = 0; protected log(msg: string) {} }. Ззовні доступне account.owner, але звернення до account.balance дасть помилку компіляції. Приватними роблять внутрішній стан і допоміжні методи, а публічними — API класу. В Angular залежності в конструкторі зазвичай роблять private, а властивості, що використовуються в шаблоні, — public або protected.",
+      "categoryId": 2
+    },
+    {
+      "id": 172,
+      "question": "Що таке статичні методи у TypeScript?",
+      "answer": "Статичні методи належать самому класу, а не його екземплярам, і викликаються через ім’я класу: MathUtils.round(5.5). Всередині статичного методу this вказує на клас, тому доступні лише статичні члени. Їх використовують для утиліт, фабричних методів (User.fromJson(data)), лічильників і кешів, спільних для всіх екземплярів. Статичні члени також можуть мати модифікатори доступу та readonly.",
+      "categoryId": 2
+    },
+    {
+      "id": 173,
+      "question": "Як оголосити та використовувати статичні методи?",
+      "answer": "Оголошують ключовим словом static: class IdGenerator { private static counter = 0; static next(): number { return ++IdGenerator.counter; } }. Викликають без створення екземпляра: IdGenerator.next(). Статичні методи успадковуються класами-нащадками. Також у класах можна використовувати статичні блоки ініціалізації static { ... } для складного налаштування статичних полів.",
+      "categoryId": 2
+    },
+    {
+      "id": 174,
+      "question": "Що таке абстрактні класи у TypeScript?",
+      "answer": "Абстрактний клас — базовий клас, з якого не можна створити екземпляр напряму; він слугує шаблоном для нащадків. Він може містити як готову реалізацію, так і абстрактні методи без тіла, які нащадки зобов’язані реалізувати. На відміну від інтерфейсу, абстрактний клас може мати поля, конструктор і спільну логіку, але клас може наслідувати лише один абстрактний клас.",
+      "categoryId": 2
+    },
+    {
+      "id": 175,
+      "question": "Як реалізувати абстрактні класи?",
+      "answer": "Оголошують через abstract: abstract class Shape { abstract area(): number; describe(): string { return `Площа: ${this.area()}`; } }. Нащадок реалізує абстрактні члени: class Circle extends Shape { constructor(private r: number) { super(); } area() { return Math.PI * this.r ** 2; } }. Виклик new Shape() дасть помилку компіляції, а new Circle(2) — коректний. Абстрактні класи також зручно використовувати як токени DI в Angular.",
+      "categoryId": 2
+    },
+    {
+      "id": 176,
+      "question": "Що таке інтерфейс для класів у TypeScript?",
+      "answer": "Інтерфейс для класу — це контракт, який клас зобов’язується виконати через implements: interface Logger { log(msg: string): void } і class ConsoleLogger implements Logger { log(msg: string) { console.log(msg); } }. Компілятор перевіряє, що клас має всі члени інтерфейсу з правильними типами. Клас може реалізовувати кілька інтерфейсів. Так працюють і Angular-хуки: implements OnInit, OnDestroy.",
+      "categoryId": 2
+    },
+    {
+      "id": 177,
+      "question": "Що таке декоратори у TypeScript?",
+      "answer": "Декоратори — спеціальні функції, що додають метадані або змінюють поведінку класів, методів, властивостей, аксесорів і параметрів. Записуються через @ перед оголошенням: @Component, @Injectable, @Input. Angular широко використовує декоратори для опису компонентів і DI. TypeScript підтримує експериментальні декоратори (experimentalDecorators, які використовує Angular) і стандартні декоратори ECMAScript з TypeScript 5.0.",
+      "categoryId": 2
+    },
+    {
+      "id": 178,
+      "question": "Як реалізувати декоратори класу?",
+      "answer": "Декоратор класу — функція, що приймає конструктор класу і може повернути новий конструктор. Часто його роблять фабрикою з параметрами: function Entity(name: string) { return function (target: Function) { Reflect.defineMetadata('entity', name, target); }; } і застосовують як @Entity('users') class User {}. Так можна додати метадані, зареєструвати клас у реєстрі або заморозити прототип. Саме так працюють @Component та @Injectable в Angular.",
+      "categoryId": 2
+    },
+    {
+      "id": 179,
+      "question": "Що таке декоратори властивостей?",
+      "answer": "Декоратор властивості застосовується до поля класу і отримує прототип класу (або конструктор для статичних полів) та ім’я властивості. У старій (experimental) моделі він не має доступу до значення поля, тому його використовують переважно для запису метаданих або визначення аксесорів через Object.defineProperty. Найвідоміший приклад — @Input() та @Output() в Angular, які реєструють поле як вхід чи вихід компонента.",
+      "categoryId": 2
+    },
+    {
+      "id": 180,
+      "question": "Як реалізувати декоратори методів?",
+      "answer": "Декоратор методу отримує target, ім’я методу і дескриптор властивості, де descriptor.value — сама функція. Його можна обгорнути: function Log(target: any, key: string, descriptor: PropertyDescriptor) { const original = descriptor.value; descriptor.value = function (...args: any[]) { console.log(key, args); return original.apply(this, args); }; }. Застосування: @Log save(data) {}. Так реалізують логування, кешування, debounce і перевірку прав.",
+      "categoryId": 2
+    },
+    {
+      "id": 181,
+      "question": "Що таке метапрограмування у TypeScript?",
+      "answer": "Метапрограмування — написання коду, який аналізує або змінює інший код чи його поведінку. У TypeScript це, з одного боку, декоратори та метадані (reflect-metadata), а з іншого — програмування на рівні типів: умовні, відображені (mapped) та шаблонні літеральні типи, keyof, typeof та infer, які обчислюють нові типи з існуючих. До інструментів метапрограмування належать також JavaScript-механізми Proxy і Reflect.",
+      "categoryId": 2
+    },
+    {
+      "id": 182,
+      "question": "Як використовувати рефлексію у TypeScript?",
+      "answer": "TypeScript не має повноцінної рефлексії, бо типи зникають після компіляції. Для отримання метаданих використовують бібліотеку reflect-metadata разом з опцією emitDecoratorMetadata: тоді компілятор зберігає типи параметрів (design:paramtypes), і їх можна прочитати через Reflect.getMetadata. Саме так історично працював DI в Angular та NestJS. Для простих випадків вистачає Object.keys, instanceof та перевірок typeof під час виконання.",
+      "categoryId": 2
+    },
+    {
+      "id": 183,
+      "question": "Що таке типи утиліт у TypeScript?",
+      "answer": "Утилітні типи — вбудовані дженерик-типи, що трансформують інші типи. Найпоширеніші: Partial (усі поля необов’язкові), Required (усі обов’язкові), Readonly, Pick (вибрати поля), Omit (виключити поля), Record (словник), Exclude і Extract (робота з union), NonNullable, ReturnType, Parameters, Awaited. Вони дозволяють створювати похідні типи без дублювання оголошень.",
+      "categoryId": 2
+    },
+    {
+      "id": 184,
+      "question": "Як використовувати типи утиліт (Pick, Omit, Partial)?",
+      "answer": "Partial<User> робить усі поля необов’язковими — зручно для оновлення (у цьому застосунку updatePreparationQuestionById приймає Partial<QuestionItem>). Pick<User, 'id' | 'name'> створює тип лише з вибраними полями, а Omit<User, 'password'> — тип без зазначених полів, наприклад для відповіді API. Їх можна комбінувати: Partial<Omit<User, 'id'>>. У модалці генерації відповіді цього проєкту використовується Pick<QuestionItem, 'question' | 'answer'>.",
+      "categoryId": 2
+    },
+    {
+      "id": 185,
+      "question": "Що таке Mapped Types у TypeScript?",
+      "answer": "Mapped types створюють новий тип, перебираючи ключі існуючого: type ReadonlyUser = { readonly [K in keyof User]: User[K] }. Вони можуть додавати чи прибирати модифікатори (readonly, ?) через + і -, змінювати типи значень і перейменовувати ключі через as. Саме так реалізовані вбудовані Partial<T>, Required<T>, Readonly<T> та Record<K, T>.",
+      "categoryId": 2
+    },
+    {
+      "id": 186,
+      "question": "Як реалізувати Mapped Types?",
+      "answer": "Mapped type пишуть через синтаксис [K in keyof T]: type Nullable<T> = { [K in keyof T]: T[K] | null }. Прибрати необов’язковість можна через -?, а readonly — через -readonly: type Mutable<T> = { -readonly [K in keyof T]: T[K] }. Перейменування ключів: type Getters<T> = { [K in keyof T as `get${Capitalize<string & K>}`]: () => T[K] }. Фільтрувати ключі можна, повертаючи never в частині as.",
+      "categoryId": 2
+    },
+    {
+      "id": 187,
+      "question": "Що таке Conditional Types у TypeScript?",
+      "answer": "Conditional types — типи, що обирають результат залежно від умови: T extends U ? X : Y. Для union вони розподільні — застосовуються до кожного варіанта окремо, тому Exclude з 'a' | 'b' і 'a' дає 'b'. Ключове слово infer дозволяє витягнути тип зсередини іншого: ReturnType отримує тип результату функції, Awaited — значення Promise. Умовні типи лежать в основі більшості утилітних типів.",
+      "categoryId": 2
+    },
+    {
+      "id": 188,
+      "question": "Як використовувати Conditional Types?",
+      "answer": "Приклади: type IsString<T> = T extends string ? true : false; type ElementType<T> = T extends (infer U)[] ? U : T — дає тип елемента масиву; type ApiData<T> = T extends { data: infer D } ? D : never — витягує поле data з відповіді. Щоб вимкнути розподільність по union, параметр обгортають у квадратні дужки: [T] extends [string]. Умовні типи використовують у бібліотеках для точних типів результату залежно від аргументів.",
+      "categoryId": 2
+    },
+    {
+      "id": 189,
+      "question": "Що таке індексні типи у TypeScript?",
+      "answer": "Індексні типи дозволяють працювати з ключами та типами властивостей. keyof T повертає union ключів (keyof User дає 'id' | 'name'), а indexed access type T[K] — тип конкретної властивості (User['name'] дає string). Також сюди відносять сигнатури індексу: { [key: string]: number } для об’єктів з довільними ключами. У поєднанні з дженериками це дозволяє писати типобезпечні функції доступу до властивостей.",
+      "categoryId": 2
+    },
+    {
+      "id": 190,
+      "question": "Як використовувати індексні типи?",
+      "answer": "Класичний приклад — типобезпечний getter: function getProp<T, K extends keyof T>(obj: T, key: K): T[K] { return obj[key]; }. Тоді getProp(user, 'name') повертає string, а getProp(user, 'foo') дає помилку компіляції. Також: type UserId = User['id']; type Values<T> = T[keyof T] — union усіх типів значень; Tuple[number] — union типів елементів кортежу або масиву.",
+      "categoryId": 2
+    },
+    {
+      "id": 191,
+      "question": "Що таке Template Literal Types?",
+      "answer": "Template literal types будують рядкові типи за шаблоном, подібно до шаблонних рядків JavaScript: type ClickEvent = `on${Capitalize<'click'>}` дає 'onClick'. Поєднання з union дає всі комбінації: `${'top' | 'bottom'}-${'left' | 'right'}` перетворюється на чотири варіанти. Для перетворення регістру є вбудовані Uppercase, Lowercase, Capitalize і Uncapitalize. Їх використовують для типізації назв подій, CSS-класів, маршрутів і ключів.",
+      "categoryId": 2
+    },
+    {
+      "id": 192,
+      "question": "Як використовувати Template Literal Types?",
+      "answer": "Приклади: type Lang = 'uk' | 'en'; type LocaleKey = `title_${Lang}` дає 'title_uk' | 'title_en'. Для подій: type Handlers<T> = { [K in keyof T as `on${Capitalize<string & K>}`]: (value: T[K]) => void }. Разом з infer можна розбирати рядки: type RouteParam<S> = S extends `${string}/:${infer P}` ? P : never — витягує назву параметра з маршруту '/users/:id'.",
+      "categoryId": 2
+    },
+    {
+      "id": 193,
+      "question": "Що таке Type Guards у TypeScript?",
+      "answer": "Type guards — вирази, що звужують тип значення всередині умовного блоку. Вбудовані guards: typeof (для примітивів), instanceof (для класів), оператор in (наявність властивості), перевірка рівності і дискримінантного поля union (if (shape.kind === 'circle')). Власні guards — функції з type predicate value is Type, а також assertion-функції asserts value is Type.",
+      "categoryId": 2
+    },
+    {
+      "id": 194,
+      "question": "Як реалізувати Type Guards?",
+      "answer": "Власний guard — функція, що повертає boolean і має type predicate у типі результату: function isUser(value: unknown): value is User { return typeof value === 'object' && value !== null && 'id' in value; }. Після if (isUser(data)) TypeScript вважає data типом User. Assertion-варіант: function assertUser(v: unknown): asserts v is User { if (!isUser(v)) throw new Error('Not a user'); }. Guards особливо корисні для перевірки даних з API.",
+      "categoryId": 2
+    },
+    {
+      "id": 195,
+      "question": "Що таке Advanced Types у TypeScript?",
+      "answer": "Advanced types — загальна назва для просунутих можливостей системи типів: union та intersection типи, літеральні типи, discriminated unions, type guards, keyof та indexed access, mapped types, conditional types з infer, template literal types, утилітні типи, рекурсивні типи і оператор satisfies. Вони дозволяють точно описати форму даних і логіку на рівні типів, щоб помилки виявлялися під час компіляції.",
+      "categoryId": 2
+    },
+    {
+      "id": 196,
+      "question": "Як реалізувати Advanced Types?",
+      "answer": "Приклад discriminated union: type State = { status: 'loading' } | { status: 'success'; data: User[] } | { status: 'error'; error: string } — у switch (state.status) TypeScript знає, які поля доступні. Рекурсивний тип: type DeepPartial<T> = { [K in keyof T]?: DeepPartial<T[K]> }. Оператор satisfies перевіряє відповідність типу без втрати виведеного: const routes = { home: '/' } satisfies Record<string, string>. Такі прийоми комбінують для типобезпечних API, станів і конфігурацій.",
+      "categoryId": 2
+    },
+    {
+      "id": 197,
+      "question": "Що таке JavaScript?",
+      "answer": "JavaScript — це мова програмування, яка використовується для створення динамічних і інтерактивних веб-сторінок. Спочатку розроблена як мова сценаріїв для браузерів, JavaScript тепер використовується і на сервері за допомогою середовища Node.js. JavaScript є мовою з динамічною типізацією і підтримує об’єктно-орієнтоване, імперативне та функціональне програмування. Вона дозволяє змінювати HTML та CSS, обробляти події, робити асинхронні запити до серверів та багато іншого, що робить її ключовою технологією у веб-розробці.",
+      "categoryId": 3
+    },
+    {
+      "id": 198,
+      "question": "Як оголосити змінну в JavaScript?",
+      "answer": "У JavaScript для оголошення змінних використовуються ключові слова var, let і const. var — це старий спосіб оголошення змінних, який має функціональну область видимості. let і const введені в ECMAScript 6 (ES6) і мають блочну область видимості. let використовується для змінних, значення яких може змінюватися, тоді як const для констант, значення яких не змінюється після ініціалізації. Рекомендується використовувати let і const замість var для більш зрозумілого і передбачуваного коду.",
+      "categoryId": 3
+    },
+    {
+      "id": 199,
+      "question": "Що таке функція в JavaScript?",
+      "answer": "Функція в JavaScript — це блок коду, який може бути викликаний за іменем і виконаний стільки разів, скільки потрібно. Функції дозволяють структурувати код, робити його більш організованим і повторно використовуваним. Функції можуть приймати аргументи і повертати значення. В JavaScript функції є об’єктами першого класу, тобто їх можна передавати як аргументи іншим функціям, повертати з функцій і призначати змінним. Існують різні способи оголошення функцій, включаючи функціональні вирази та стрілкові функції (arrow functions), введені в ES6.",
+      "categoryId": 3
+    },
+    {
+      "id": 200,
+      "question": "Як оголосити функцію в JavaScript?",
+      "answer": "Функцію в JavaScript можна оголосити кількома способами. Найпоширеніший спосіб — це використання ключового слова function. Також можна використовувати функціональні вирази або стрілкові функції (arrow functions), введені в ECMAScript 6 (ES6). Кожен з цих способів має свої особливості, але всі вони дозволяють створювати і викликати функції у вашому коді.",
+      "categoryId": 3
+    },
+    {
+      "id": 201,
+      "question": "Що таке масив в JavaScript?",
+      "answer": "Масив в JavaScript — це структура даних, яка дозволяє зберігати впорядковані колекції значень. Масиви можуть містити значення будь-яких типів, включаючи інші масиви, і дозволяють доступ до елементів за індексами, починаючи з нуля. Масиви є об’єктами в JavaScript і мають вбудовані методи для маніпуляції даними, такі як push, pop, shift, unshift, slice, splice, forEach, map, filter, reduce та багато інших. Масиви є важливою частиною JavaScript і широко використовуються для зберігання та обробки списків даних.",
+      "categoryId": 3
+    },
+    {
+      "id": 202,
+      "question": "Як додати елемент до масиву в JavaScript?",
+      "answer": "Найпоширеніший спосіб — метод push, який додає елементи в кінець масиву і змінює його: arr.push(4). Метод unshift додає на початок, а splice(index, 0, item) — у довільну позицію. Щоб не змінювати вихідний масив (іммутабельний підхід, важливий для Angular OnPush чи React), створюють новий масив через spread: const next = [...arr, 4] або arr.concat(4).",
+      "categoryId": 3
+    },
+    {
+      "id": 203,
+      "question": "Що таке об’єкт в JavaScript?",
+      "answer": "Об’єкт — це колекція пар «ключ — значення», де ключами є рядки або символи, а значеннями — будь-які дані, включно з функціями (методами). Об’єкти передаються за посиланням, мають прототип, від якого успадковують властивості, і є основою майже всього в JavaScript: масиви, функції, дати — теж об’єкти. Властивості читають через крапку (user.name) або квадратні дужки (user['name']).",
+      "categoryId": 3
+    },
+    {
+      "id": 204,
+      "question": "Як створити об’єкт в JavaScript?",
+      "answer": "Найчастіше — літералом: const user = { name: 'Анна', age: 25, greet() { return 'Привіт'; } }. Також об’єкти створюють через класи та конструктори (new User()), Object.create(proto) з явним прототипом, Object.fromEntries з масиву пар та копіюванням: { ...other } або structuredClone(other) для глибокої копії. Сучасний синтаксис підтримує скорочені властивості ({ name }) та обчислювані ключі ({ [key]: value }).",
+      "categoryId": 3
+    },
+    {
+      "id": 205,
+      "question": "Що таке цикл в JavaScript?",
+      "answer": "Цикл — конструкція, що багаторазово виконує блок коду, поки виконується умова. У JavaScript є цикли for (з лічильником), while і do...while (з умовою), for...of (перебір значень ітерованих об’єктів: масивів, рядків, Map, Set) і for...in (перебір ключів об’єкта, включно з успадкованими). Для масивів також використовують методи forEach, map, filter і reduce. Керувати циклом можна через break і continue.",
+      "categoryId": 3
+    },
+    {
+      "id": 206,
+      "question": "Як працює цикл for в JavaScript?",
+      "answer": "Цикл for складається з трьох частин: ініціалізації, умови й кроку — for (let i = 0; i < arr.length; i++) { ... }. Спочатку один раз виконується ініціалізація, потім перед кожною ітерацією перевіряється умова, і якщо вона істинна — виконується тіло, а після нього — крок. Завдяки let кожна ітерація має власну копію змінної i, що важливо для замикань. Цикл можна достроково завершити через break або пропустити ітерацію через continue.",
+      "categoryId": 3
+    },
+    {
+      "id": 207,
+      "question": "Що таке умовний оператор в JavaScript?",
+      "answer": "Умовні оператори виконують різний код залежно від умови. До них належать if...else (і ланцюжки else if), switch для порівняння одного значення з кількома варіантами, тернарний оператор умова ? a : b для виразів, а також логічні оператори &&, || і ?? для коротких умовних обчислень. Умова приводиться до boolean: хибними вважаються false, 0, '', null, undefined і NaN, а все інше — істинне.",
+      "categoryId": 3
+    },
+    {
+      "id": 208,
+      "question": "Як працює оператор if в JavaScript?",
+      "answer": "if перевіряє умову і виконує блок, якщо вона істинна: if (age >= 18) { ... } else if (age >= 14) { ... } else { ... }. Вираз у дужках приводиться до boolean за правилами truthy і falsy. Гілки else if перевіряються послідовно до першої істинної, а else виконується, якщо жодна умова не спрацювала. Для простих випадків замість if використовують тернарний оператор або ранній return.",
+      "categoryId": 3
+    },
+    {
+      "id": 209,
+      "question": "Що таке оператор порівняння в JavaScript?",
+      "answer": "Оператори порівняння порівнюють два значення і повертають boolean: == і != (нестрога рівність з приведенням типів), === і !== (строга рівність без приведення), а також >, <, >= і <=. Рядки порівнюються посимвольно за кодами Unicode. Об’єкти порівнюються за посиланням, тому два різні об’єкти з однаковим вмістом не рівні. Для особливих випадків (NaN, +0 і -0) існує Object.is.",
+      "categoryId": 3
+    },
+    {
+      "id": 210,
+      "question": "Як працює оператор === в JavaScript?",
+      "answer": "=== — оператор строгої рівності: повертає true, лише якщо значення мають однаковий тип і однакове значення, без приведення типів. Тому 1 === '1' дає false, а 1 == '1' — true. Для об’єктів === перевіряє, чи це той самий об’єкт у пам’яті. Особливості: NaN === NaN дає false, а +0 === -0 дає true. У сучасному коді рекомендовано завжди використовувати === замість ==.",
+      "categoryId": 3
+    },
+    {
+      "id": 215,
+      "question": "Що таке строка в JavaScript?",
+      "answer": "Рядок (string) — примітивний тип для зберігання тексту у кодуванні UTF-16. Рядки створюють в одинарних, подвійних лапках або бектиках (шаблонні рядки). Вони незмінні: методи на кшталт toUpperCase, slice, replace повертають новий рядок. Довжину отримують через length, а символи — за індексом str[0] або str.at(-1). Корисні методи: includes, startsWith, split, trim, padStart, replaceAll.",
+      "categoryId": 3
+    },
+    {
+      "id": 216,
+      "question": "Як конкатенувати строки в JavaScript?",
+      "answer": "Рядки об’єднують оператором +: 'Привіт, ' + name, або оператором +=. Сучасніший і читабельніший спосіб — шаблонні рядки: `Привіт, ${name}!`. Також є метод concat і join для масивів: ['a', 'b'].join(', '). Якщо один з операндів + є рядком, інший буде перетворено на рядок, тому '5' + 1 дає '51'.",
+      "categoryId": 3
+    },
+    {
+      "id": 217,
+      "question": "Що таке шаблонні строки в JavaScript?",
+      "answer": "Шаблонні рядки (template literals) — рядки в бектиках, які підтримують вбудовування виразів через ${...} та багаторядковий текст без спецсимволів. Наприклад: `Сума: ${a + b} грн`. Існують також теговані шаблони — функція перед шаблоном отримує окремо статичні частини і значення виразів; їх використовують для безпечного формування HTML, SQL чи CSS (наприклад, styled-components, $localize в Angular).",
+      "categoryId": 3
+    },
+    {
+      "id": 218,
+      "question": "Як використовувати шаблонні строки?",
+      "answer": "Рядок пишуть у бектиках, а значення вставляють через ${}: const message = `Користувач ${user.name} має ${user.orders.length} замовлень`. Всередині ${} можна писати будь-який вираз, включно з тернарним оператором і викликом функцій. Переноси рядків зберігаються як є. Для тегованого шаблону функцію ставлять перед бектиками: html`<p>${text}</p>`, де функція отримує масив рядків і значення окремо.",
+      "categoryId": 3
+    },
+    {
+      "id": 219,
+      "question": "Що таке null та undefined в JavaScript?",
+      "answer": "undefined — значення змінної, яку оголосили, але не ініціалізували, відсутньої властивості об’єкта, параметра без аргументу і результату функції без return. null — значення, яке програміст присвоює явно, щоб позначити «порожньо» або «немає об’єкта». typeof undefined повертає 'undefined', а typeof null — 'object' (історична помилка мови). Обидва значення falsy і обробляються операторами ?. і ??.",
+      "categoryId": 3
+    },
+    {
+      "id": 220,
+      "question": "Яка різниця між null та undefined?",
+      "answer": "undefined зазвичай означає, що значення ще не задано (автоматично ставить мова), а null — що значення навмисно відсутнє (ставить розробник). null == undefined дає true, але null === undefined — false. При перетворенні на число null дає 0, а undefined — NaN. Параметри за замовчуванням у функціях спрацьовують лише для undefined, а не для null. JSON підтримує null, але властивості зі значенням undefined при серіалізації відкидаються.",
+      "categoryId": 3
+    },
+    {
+      "id": 221,
+      "question": "Що таке NaN в JavaScript?",
+      "answer": "NaN (Not a Number) — спеціальне числове значення, яке означає результат невдалої математичної операції: 0 / 0, Number('abc'), Math.sqrt(-1). Попри назву, typeof NaN дорівнює 'number'. NaN — єдине значення, яке не дорівнює самому собі: NaN === NaN дає false. Будь-яка арифметична операція з NaN також повертає NaN, тому помилка «поширюється» обчисленнями.",
+      "categoryId": 3
+    },
+    {
+      "id": 222,
+      "question": "Як перевірити, чи значення є NaN?",
+      "answer": "Найнадійніше — Number.isNaN(value), яка повертає true лише для справжнього значення NaN. Глобальна isNaN(value) спочатку перетворює аргумент на число, тому isNaN('abc') дає true, що часто небажано. Також можна використати Object.is(value, NaN) або перевірку value !== value, яка істинна лише для NaN. Для перевірки, чи значення є коректним скінченним числом, використовують Number.isFinite.",
+      "categoryId": 3
+    },
+    {
+      "id": 223,
+      "question": "Що таке замикання (closure) в JavaScript?",
+      "answer": "Замикання — це функція разом з лексичним оточенням, у якому її створено. Завдяки замиканню внутрішня функція має доступ до змінних зовнішньої функції навіть після того, як зовнішня завершила роботу. Замикання створюються щоразу при створенні функції. Вони лежать в основі приватних змінних, фабрик функцій, каррінгу, мемоізації та обробників подій.",
+      "categoryId": 3
+    },
+    {
+      "id": 224,
+      "question": "Як працює замикання (closure)?",
+      "answer": "Коли функція створюється, вона зберігає посилання на своє лексичне оточення (scope). Наприклад: function counter() { let count = 0; return () => ++count; } const next = counter(); next(); next() — змінна count живе, доки існує функція next, і недоступна ззовні. Кожен виклик counter() створює нове оточення з власним count. Класична пастка: var у циклі дає одну спільну змінну для всіх колбеків, а let — окрему для кожної ітерації.",
+      "categoryId": 3
+    },
+    {
+      "id": 225,
+      "question": "Що таке стрілочні функції в JavaScript?",
+      "answer": "Стрілкові функції — скорочений синтаксис функцій: const sum = (a, b) => a + b. Головна відмінність — вони не мають власного this, arguments, super і new.target, а беруть this з навколишньої області видимості. Тому їх зручно використовувати як колбеки (наприклад, у subscribe чи setTimeout всередині методів класу), але не варто використовувати як методи об’єкта чи конструктори — їх не можна викликати через new.",
+      "categoryId": 3
+    },
+    {
+      "id": 226,
+      "question": "Що таке прототипне наслідування в JavaScript?",
+      "answer": "Прототипне наслідування — механізм, за яким об’єкти успадковують властивості та методи від інших об’єктів через приховане посилання [[Prototype]]. Якщо властивості немає в самому об’єкті, рушій шукає її в прототипі, потім у прототипі прототипу — ланцюжком до Object.prototype, після якого йде null. Класи в JavaScript (class, extends) — синтаксичний цукор над прототипним наслідуванням.",
+      "categoryId": 3
+    },
+    {
+      "id": 227,
+      "question": "Як працює прототипне наслідування?",
+      "answer": "Кожен об’єкт має посилання на прототип, яке можна отримати через Object.getPrototypeOf(obj). Функції-конструктори мають властивість prototype, яка стає прототипом створених через new об’єктів. Наприклад, const animal = { eat() {} }; const dog = Object.create(animal); dog.eat() — метод знайдено в прототипі. При class Dog extends Animal ланцюжок виглядає так: dog → Dog.prototype → Animal.prototype → Object.prototype. Методи в прототипі спільні для всіх екземплярів, що економить пам’ять.",
+      "categoryId": 3
+    },
+    {
+      "id": 228,
+      "question": "Що таке контекст виконання (execution context) в JavaScript?",
+      "answer": "Контекст виконання — середовище, в якому виконується код: він містить змінні, оголошення функцій, ланцюжок областей видимості і значення this. Існує глобальний контекст і окремий контекст для кожного виклику функції (а також для eval). Контексти складаються в стек викликів (call stack): новий виклик функції додає контекст на вершину, а після завершення він видаляється.",
+      "categoryId": 3
+    },
+    {
+      "id": 229,
+      "question": "Як працює контекст виконання?",
+      "answer": "Створення контексту має дві фази. У фазі створення рушій формує лексичне оточення: реєструє оголошення функцій повністю, змінні var ініціалізує як undefined, а let, const і class залишає неініціалізованими (тимчасова мертва зона), а також визначає this і посилання на зовнішнє оточення. У фазі виконання код виконується рядок за рядком і змінним присвоюються значення. Саме цей механізм пояснює hoisting і замикання.",
+      "categoryId": 3
+    },
+    {
+      "id": 230,
+      "question": "Що таке \"this\" в JavaScript?",
+      "answer": "this — ключове слово, значення якого визначається тим, як викликано функцію, а не тим, де її оголошено. У методі об’єкта this вказує на об’єкт, через який метод викликано; у конструкторі — на новий об’єкт; у звичайній функції в strict mode — undefined (без strict mode — глобальний об’єкт). Стрілкові функції не мають власного this і беруть його з зовнішньої області. Явно задати this можна через call, apply і bind.",
+      "categoryId": 3
+    },
+    {
+      "id": 231,
+      "question": "Як працює \"this\" у різних контекстах?",
+      "answer": "У глобальному коді this — це globalThis (в модулях — undefined). У методі obj.method() — obj. У звичайній функції без об’єкта — undefined у strict mode. У конструкторі та класі при виклику через new — новий екземпляр. В обробнику DOM-події, заданому через addEventListener зі звичайною функцією, — елемент. У стрілковій функції — this зовнішнього контексту. Типова помилка — передати метод як колбек (setTimeout(obj.method)), втративши this; рішення — bind або стрілкова функція.",
+      "categoryId": 3
+    },
+    {
+      "id": 232,
+      "question": "Що таке call, apply та bind в JavaScript?",
+      "answer": "call, apply і bind — методи функцій для явного задання this. call(thisArg, a, b) викликає функцію одразу з аргументами через кому. apply(thisArg, [a, b]) робить те саме, але приймає аргументи масивом. bind(thisArg, a) не викликає функцію, а повертає нову функцію з назавжди прив’язаним this і, за потреби, частково застосованими аргументами.",
+      "categoryId": 3
+    },
+    {
+      "id": 233,
+      "question": "Як використовувати call, apply та bind?",
+      "answer": "call використовують для запозичення методів: Array.prototype.slice.call(arguments). apply раніше застосовували для передачі масиву аргументів: Math.max.apply(null, nums), зараз це простіше зробити через spread: Math.max(...nums). bind використовують, щоб зберегти контекст у колбеках: button.addEventListener('click', this.handleClick.bind(this)), і для часткового застосування: const double = multiply.bind(null, 2). Повторний bind уже прив’язаної функції this не змінює.",
+      "categoryId": 3
+    },
+    {
+      "id": 234,
+      "question": "Що таке асинхронність в JavaScript?",
+      "answer": "JavaScript однопотоковий, але асинхронність дозволяє запускати довгі операції (мережеві запити, таймери, читання файлів) без блокування потоку. Операція запускається, а результат обробляється пізніше через колбек, проміс чи async/await. Цим керує event loop разом з чергами задач і мікрозадач, а самі операції виконують API середовища (браузера чи Node.js).",
+      "categoryId": 3
+    },
+    {
+      "id": 235,
+      "question": "Як працює setTimeout у JavaScript?",
+      "answer": "setTimeout(callback, delay) просить середовище викликати колбек не раніше ніж через delay мілісекунд і повертає ідентифікатор, за яким виклик можна скасувати через clearTimeout. Після закінчення таймера колбек потрапляє в чергу макрозадач і виконається лише тоді, коли стек викликів порожній і всі мікрозадачі оброблені. Тому setTimeout(fn, 0) не виконує код негайно, а лише після поточного коду і промісів. Затримка не гарантована — це мінімальний час очікування.",
+      "categoryId": 3
+    },
+    {
+      "id": 236,
+      "question": "Що таке проміси в JavaScript?",
+      "answer": "Проміс (Promise) — об’єкт, що представляє результат асинхронної операції, який стане доступним у майбутньому. Він має три стани: pending (очікування), fulfilled (успішно виконано) і rejected (відхилено з помилкою); змінивши стан, проміс більше його не змінює. Результат обробляють через then, catch і finally, які повертають нові проміси, що дозволяє будувати ланцюжки без «пекла колбеків».",
+      "categoryId": 3
+    },
+    {
+      "id": 237,
+      "question": "Як створити та використовувати проміси?",
+      "answer": "Проміс створюють через конструктор: const wait = ms => new Promise(resolve => setTimeout(resolve, ms)); у колбеку викликають resolve(value) при успіху або reject(error) при помилці. Використовують через ланцюжок: fetch(url).then(res => res.json()).then(data => ...).catch(err => ...).finally(() => ...). Для кількох промісів є Promise.all (усі успішні), Promise.allSettled (усі завершені), Promise.race (перший завершений) і Promise.any (перший успішний).",
+      "categoryId": 3
+    },
+    {
+      "id": 238,
+      "question": "Що таке async/await у JavaScript?",
+      "answer": "async/await — синтаксис для роботи з промісами в стилі синхронного коду. Функція з async завжди повертає проміс, а всередині неї оператор await призупиняє виконання до виконання промісу і повертає його результат. Помилки обробляються звичайним try/catch. Під капотом це ті самі проміси та мікрозадачі, тому await не блокує основний потік.",
+      "categoryId": 3
+    },
+    {
+      "id": 239,
+      "question": "Як використовувати async/await?",
+      "answer": "Позначте функцію як async і чекайте проміси через await: async function loadUser(id) { try { const res = await fetch(`/api/users/${id}`); return await res.json(); } catch (e) { console.error(e); } }. Незалежні запити не варто чекати послідовно — краще запускати паралельно: const [a, b] = await Promise.all([getA(), getB()]). У сучасних модулях await можна використовувати на верхньому рівні (top-level await).",
+      "categoryId": 3
+    },
+    {
+      "id": 240,
+      "question": "Що таке замикання та як його використовувати?",
+      "answer": "Замикання — це здатність функції пам’ятати змінні з області видимості, в якій її створено, навіть після завершення зовнішньої функції. Використовують замикання для приватного стану (function createCounter() { let count = 0; return { inc: () => ++count, get: () => count }; }), фабрик функцій (const add = a => b => a + b), мемоізації, debounce і throttle, а також в обробниках подій. Варто пам’ятати, що замикання утримують змінні в пам’яті, поки існує функція.",
+      "categoryId": 3
+    },
+    {
+      "id": 241,
+      "question": "Що таке \"strict mode\" у JavaScript?",
+      "answer": "Strict mode — суворий режим виконання JavaScript, що вмикається директивою 'use strict'. Він перетворює «тихі» помилки на винятки: заборонено присвоєння неоголошеним змінним, запис у властивості лише для читання, дублікати параметрів і with; this у звичайних функціях дорівнює undefined, а не глобальному об’єкту. Це робить код безпечнішим і дозволяє рушіям краще його оптимізувати.",
+      "categoryId": 3
+    },
+    {
+      "id": 242,
+      "question": "Як увімкнути \"strict mode\"?",
+      "answer": "Додайте рядок 'use strict'; на початок скрипта (для всього файлу) або на початок тіла функції (лише для неї). ES-модулі (import і export) і тіла класів виконуються в strict mode автоматично, тому в сучасних проєктах з бандлером або TypeScript директиву зазвичай писати не потрібно. TypeScript з опцією alwaysStrict додає її у вихідні файли сам.",
+      "categoryId": 3
+    },
+    {
+      "id": 243,
+      "question": "Що таке \"hoisting\" у JavaScript?",
+      "answer": "Hoisting (підняття) — поведінка, за якої оголошення змінних і функцій обробляються до виконання коду, тому до деяких з них можна звертатися раніше, ніж вони оголошені в тексті. Функції, оголошені через function declaration, піднімаються повністю, змінні var — лише оголошення (значення undefined), а let, const і class піднімаються, але до оголошення знаходяться в тимчасовій мертвій зоні (TDZ).",
+      "categoryId": 3
+    },
+    {
+      "id": 244,
+      "question": "Як працює \"hoisting\"?",
+      "answer": "Під час створення контексту виконання рушій реєструє всі оголошення в області видимості. Тому sayHi() працює до function sayHi() {}, console.log(x) перед var x = 5 виведе undefined, а console.log(y) перед let y = 5 кине ReferenceError через TDZ. Function expression (const fn = function () {}) поводиться як змінна, а не як функція, тому до оголошення її викликати не можна. Хорошою практикою є оголошувати змінні до використання.",
+      "categoryId": 3
+    },
+    {
+      "id": 245,
+      "question": "Що таке модулі в JavaScript?",
+      "answer": "Модуль — це файл з власною областю видимості, що явно експортує частину свого коду і імпортує залежності з інших модулів. Модулі вирішують проблему глобальних змінних і дозволяють будувати структуровані застосунки. Стандартом є ES-модулі (import і export), історично також використовувались CommonJS (require і module.exports у Node.js) та AMD. ES-модулі завжди виконуються в strict mode і завантажуються один раз.",
+      "categoryId": 3
+    },
+    {
+      "id": 246,
+      "question": "Як використовувати модулі (import/export)?",
+      "answer": "Іменований експорт: export const API_URL = '...'; export function get() {}, імпорт: import { API_URL, get } from './api.js'. Експорт за замовчуванням: export default class Store {}, імпорт: import Store from './store.js'. Можна перейменовувати (import { get as httpGet }), імпортувати весь модуль (import * as api) і реекспортувати (export { get } from './api.js'). У браузері модульний скрипт підключають через тег script з type=\"module\".",
+      "categoryId": 3
+    },
+    {
+      "id": 247,
+      "question": "Що таке IIFE (Immediately Invoked Function Expression)?",
+      "answer": "IIFE (Immediately Invoked Function Expression) — функція, яка оголошується і одразу викликається: (function () { ... })() або (() => { ... })(). Вона створює власну область видимості, тому змінні всередині не потрапляють у глобальну. До появи модулів і let та const IIFE була основним способом ізолювати код і створювати приватний стан (патерн «модуль»).",
+      "categoryId": 3
+    },
+    {
+      "id": 248,
+      "question": "Як використовувати IIFE?",
+      "answer": "IIFE використовують для ізоляції змінних: (function () { const secret = 42; window.api = { get: () => secret }; })(), для одноразової ініціалізації, для async-коду на верхньому рівні там, де немає top-level await: (async () => { const data = await load(); })(), і для патерна «модуль» з приватним станом. У сучасному коді більшість цих задач вирішують ES-модулі та блочна область видимості.",
+      "categoryId": 3
+    },
+    {
+      "id": 249,
+      "question": "Що таке Event Loop у JavaScript?",
+      "answer": "Event Loop — механізм, який дозволяє однопотоковому JavaScript виконувати асинхронний код. Він постійно перевіряє, чи порожній стек викликів, і якщо так — бере задачі з черг: спочатку всі мікрозадачі (проміси, queueMicrotask, MutationObserver), потім одну макрозадачу (таймери, події, I/O). У браузері між макрозадачами може виконуватися відмальовка сторінки.",
+      "categoryId": 3
+    },
+    {
+      "id": 250,
+      "question": "Як працює Event Loop?",
+      "answer": "Синхронний код виконується в стеку викликів. Асинхронні операції передаються API середовища, а їхні колбеки після завершення потрапляють у черги. Коли стек порожній, event loop виконує всі мікрозадачі (наприклад, then промісів), після чого бере одну макрозадачу (наприклад, колбек setTimeout), і цикл повторюється. Тому console.log('a'); setTimeout(() => console.log('b')); Promise.resolve().then(() => console.log('c')); console.log('d') виведе a, d, c, b.",
+      "categoryId": 3
+    },
+    {
+      "id": 251,
+      "question": "Що таке оператор \"new\" у JavaScript?",
+      "answer": "Оператор new створює новий об’єкт за допомогою функції-конструктора або класу: const user = new User('Анна'). Він створює порожній об’єкт, пов’язує його з прототипом конструктора, викликає конструктор з this, що вказує на новий об’єкт, і повертає цей об’єкт. Класи можна викликати лише через new, а стрілкові функції — взагалі не можна.",
+      "categoryId": 3
+    },
+    {
+      "id": 252,
+      "question": "Як працює оператор \"new\"?",
+      "answer": "new Constructor(args) виконує чотири кроки: 1) створює новий порожній об’єкт; 2) встановлює його [[Prototype]] на Constructor.prototype; 3) викликає Constructor з this, що вказує на новий об’єкт, і переданими аргументами; 4) повертає цей об’єкт, якщо конструктор явно не повернув інший об’єкт. Спрощено: function myNew(C, ...args) { const obj = Object.create(C.prototype); const res = C.apply(obj, args); return res instanceof Object ? res : obj; }.",
+      "categoryId": 3
+    },
+    {
+      "id": 253,
+      "question": "Що таке Map та Set у JavaScript?",
+      "answer": "Map — колекція пар «ключ — значення», де ключем може бути будь-що (об’єкти, функції, примітиви); вона зберігає порядок додавання і має властивість size. Set — колекція унікальних значень будь-якого типу. Обидві структури ітеровані, мають методи has, delete і clear, та забезпечують швидкий пошук. Унікальність визначається алгоритмом SameValueZero, тому NaN дорівнює NaN.",
+      "categoryId": 3
+    },
+    {
+      "id": 254,
+      "question": "Як використовувати Map та Set?",
+      "answer": "Map: const cache = new Map(); cache.set(user, data); cache.get(user); cache.has(user); cache.delete(user); перебір через for (const [key, value] of cache) або cache.forEach. Map краще за об’єкт, коли ключі не рядки або часто додаються й видаляються. Set: const ids = new Set([1, 2, 2]) містить 1 і 2; ids.add(3); ids.has(1). Популярний прийом — видалення дублікатів з масиву: [...new Set(arr)].",
+      "categoryId": 3
+    },
+    {
+      "id": 255,
+      "question": "Що таке WeakMap та WeakSet?",
+      "answer": "WeakMap — колекція пар, де ключами можуть бути лише об’єкти (а також незареєстровані символи), і ці посилання слабкі: якщо на ключ більше ніде немає посилань, збирач сміття видалить і ключ, і значення. WeakSet — аналогічна колекція об’єктів зі слабкими посиланнями. Вони не ітеровані і не мають size, бо їхній вміст може змінитися в будь-який момент через збирання сміття.",
+      "categoryId": 3
+    },
+    {
+      "id": 256,
+      "question": "Як використовувати WeakMap та WeakSet?",
+      "answer": "WeakMap використовують для прив’язки додаткових даних до об’єктів без втручання в них і без витоків пам’яті: кеш обчислень для об’єкта (const cache = new WeakMap(); cache.set(obj, result)), приватні дані класу, метадані для DOM-вузлів. WeakSet зручний для позначення об’єктів, наприклад уже оброблених вузлів чи відвіданих об’єктів при обході графа. Доступні методи: set, get, has, delete для WeakMap і add, has, delete для WeakSet.",
+      "categoryId": 3
+    },
+    {
+      "id": 257,
+      "question": "Що таке генератори у JavaScript?",
+      "answer": "Генератор — функція, оголошена через function*, яка може призупиняти виконання оператором yield і продовжувати його пізніше. Виклик генератора повертає об’єкт-ітератор з методом next(), який повертає { value, done }. Генератори дозволяють створювати ліниві та нескінченні послідовності і керувати потоком виконання. Існують також асинхронні генератори (async function*), які перебирають через for await...of.",
+      "categoryId": 3
+    },
+    {
+      "id": 258,
+      "question": "Як використовувати генератори?",
+      "answer": "Приклад: function* ids() { let id = 1; while (true) yield id++; } const gen = ids(); gen.next().value дає 1, наступний виклик — 2. Генератори зручно перебирати через for...of або spread, але для нескінченних потрібно обмеження. У next(value) можна передати значення всередину генератора, а методи return() і throw() завершують його або кидають помилку. Генератори використовують для реалізації ітераторів власних колекцій, лінивих обчислень і пагінації.",
+      "categoryId": 3
+    },
+    {
+      "id": 259,
+      "question": "Що таке Proxy у JavaScript?",
+      "answer": "Proxy — об’єкт-обгортка, що дозволяє перехоплювати й перевизначати фундаментальні операції над іншим об’єктом: читання і запис властивостей, перевірку in, видалення, виклик функції, new. Створюється як new Proxy(target, handler), де handler містить пастки (traps): get, set, has, deleteProperty, apply, construct тощо. На Proxy побудовано реактивність у Vue, валідацію, логування й віртуальні об’єкти.",
+      "categoryId": 3
+    },
+    {
+      "id": 260,
+      "question": "Як працювати з Proxy?",
+      "answer": "Приклад валідації: const user = new Proxy({}, { set(target, key, value) { if (key === 'age' && typeof value !== 'number') throw new TypeError('age must be a number'); return Reflect.set(target, key, value); } }). Приклад значень за замовчуванням: new Proxy(obj, { get: (t, k) => (k in t ? t[k] : 'N/A') }). У пастках зручно викликати відповідний метод Reflect, щоб зберегти стандартну поведінку. Proxy можна зробити відкликуваним через Proxy.revocable.",
+      "categoryId": 3
+    },
+    {
+      "id": 261,
+      "question": "Що таке символи (Symbols) у JavaScript?",
+      "answer": "Symbol — примітивний тип для унікальних ідентифікаторів: кожен виклик Symbol('desc') створює нове значення, яке не дорівнює жодному іншому. Символи використовують як ключі властивостей, які не конфліктують з іншими і не потрапляють у for...in, Object.keys чи JSON.stringify. Існують глобальні символи (Symbol.for('key')) і вбудовані «відомі» символи, що змінюють поведінку мови: Symbol.iterator, Symbol.toPrimitive, Symbol.asyncIterator.",
+      "categoryId": 3
+    },
+    {
+      "id": 262,
+      "question": "Як використовувати символи?",
+      "answer": "Символ як прихований ключ: const ID = Symbol('id'); user[ID] = 123 — така властивість не перетнеться з іншими ключами і не з’явиться в Object.keys. Щоб зробити об’єкт ітерованим, реалізують метод [Symbol.iterator]() { ... }, і тоді об’єкт працює з for...of і spread. Глобальний реєстр Symbol.for('app.key') дозволяє отримати той самий символ у різних частинах коду. Отримати символьні ключі можна через Object.getOwnPropertySymbols.",
+      "categoryId": 3
+    },
+    {
+      "id": 263,
+      "question": "Що таке Reflect у JavaScript?",
+      "answer": "Reflect — вбудований об’єкт зі статичними методами для операцій над об’єктами: Reflect.get, set, has, deleteProperty, ownKeys, defineProperty, getPrototypeOf, apply, construct. Його методи відповідають пасткам Proxy і повертають результат (наприклад, true або false) замість того, щоб кидати винятки. Reflect не є конструктором і робить мета-операції більш послідовними та функціональними.",
+      "categoryId": 3
+    },
+    {
+      "id": 264,
+      "question": "Як працювати з Reflect?",
+      "answer": "Найчастіше Reflect використовують у пастках Proxy, щоб передати операцію цільовому об’єкту зі стандартною поведінкою: get(target, key, receiver) { log(key); return Reflect.get(target, key, receiver); }. Також Reflect.ownKeys(obj) повертає всі власні ключі, включно із символами, Reflect.has(obj, 'x') — функціональна заміна оператора in, а Reflect.apply(fn, thisArg, args) — заміна fn.apply. Reflect.defineProperty повертає false замість винятку при невдачі.",
+      "categoryId": 3
+    },
+    {
+      "id": 265,
+      "question": "Що таке міжнародні стандартизації (Intl) у JavaScript?",
+      "answer": "Intl — вбудований API інтернаціоналізації для форматування даних з урахуванням мови та регіону. Він містить Intl.NumberFormat (числа, валюти, відсотки), Intl.DateTimeFormat (дати й час), Intl.RelativeTimeFormat («3 дні тому»), Intl.PluralRules (правила множини), Intl.Collator (порівняння рядків для сортування), Intl.ListFormat (списки) і Intl.Segmenter. Це дозволяє не підключати важкі бібліотеки для локалізації.",
+      "categoryId": 3
+    },
+    {
+      "id": 266,
+      "question": "Як використовувати Intl?",
+      "answer": "Приклади: new Intl.NumberFormat('uk-UA', { style: 'currency', currency: 'UAH' }).format(1234.5) дає «1 234,50 ₴»; new Intl.DateTimeFormat('uk-UA', { dateStyle: 'long' }).format(new Date()) — дату українською; new Intl.RelativeTimeFormat('uk', { numeric: 'auto' }).format(-1, 'day') дає «учора»; new Intl.PluralRules('uk').select(5) дає 'many', що допомагає підібрати правильну форму слова. Для сортування рядків з урахуванням мови використовують arr.sort(new Intl.Collator('uk').compare).",
+      "categoryId": 3
+    },
+    {
+      "id": 267,
+      "question": "Що таке Web Workers?",
+      "answer": "Web Workers — механізм браузера для виконання JavaScript в окремому фоновому потоці, паралельно з основним. Вони дозволяють виконувати важкі обчислення (обробку даних, зображень, шифрування) без блокування інтерфейсу. Воркер не має доступу до DOM і window, а з основним потоком обмінюється повідомленнями через postMessage. Існують виділені (Dedicated), спільні (Shared) і сервісні (Service) воркери.",
+      "categoryId": 3
+    },
+    {
+      "id": 268,
+      "question": "Як працювати з Web Workers?",
+      "answer": "Створюють воркер з окремого файлу: const worker = new Worker(new URL('./worker.js', import.meta.url), { type: 'module' }). Основний потік надсилає дані через worker.postMessage(data) і отримує результат через worker.onmessage = e => ...; у файлі воркера — self.onmessage = e => { self.postMessage(heavyCalc(e.data)); }. Дані копіюються через structured clone, а великі буфери можна передати без копіювання як transferable. Завершують воркер через worker.terminate().",
+      "categoryId": 3
+    },
+    {
+      "id": 269,
+      "question": "Що таке Service Workers?",
+      "answer": "Service Worker — особливий воркер, що працює як проксі між вебзастосунком і мережею. Він може перехоплювати запити (подія fetch), кешувати ресурси через Cache API, забезпечувати роботу офлайн, отримувати push-повідомлення та виконувати фонову синхронізацію. Він має власний життєвий цикл (install, activate, fetch), працює лише через HTTPS (або localhost), не має доступу до DOM і може працювати навіть тоді, коли сторінка закрита.",
+      "categoryId": 3
+    },
+    {
+      "id": 270,
+      "question": "Як реалізувати Service Workers?",
+      "answer": "Реєстрація: if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js'). У файлі sw.js: у події install кешують статичні ресурси (caches.open('v1').then(c => c.addAll([...]))), в activate видаляють старі кеші, а у fetch повертають відповідь з кешу або з мережі (event.respondWith(caches.match(event.request).then(r => r || fetch(event.request)))). На практиці зручніше використовувати Workbox або, в Angular, @angular/service-worker.",
+      "categoryId": 3
+    },
+    {
+      "id": 271,
+      "question": "Що таке модулі ES6?",
+      "answer": "Модулі ES6 (ES-модулі) — стандартна модульна система JavaScript, представлена в ES2015. Вони використовують статичні import і export, що дозволяє бандлерам виконувати tree-shaking. Модулі мають власну область видимості, автоматично працюють у strict mode, завантажуються й виконуються один раз, а імпорти є «живими» зв’язками з експортованими змінними. Підтримуються браузерами (type=\"module\") і Node.js (.mjs або type: module у package.json).",
+      "categoryId": 3
+    },
+    {
+      "id": 272,
+      "question": "Як використовувати динамічний import?",
+      "answer": "Динамічний import() завантажує модуль під час виконання і повертає проміс: const { Chart } = await import('./chart.js'). Його використовують для lazy loading — завантаження коду лише тоді, коли він потрібен (за кліком, при переході на маршрут), що зменшує початковий бандл. Бандлери автоматично виносять такий модуль в окремий chunk. Саме через import() в Angular реалізовано loadComponent і loadChildren у маршрутах.",
+      "categoryId": 3
+    },
+    {
+      "id": 273,
+      "question": "Що таке метапрограмування в JavaScript?",
+      "answer": "Метапрограмування — написання коду, що працює з іншим кодом як з даними: аналізує, змінює чи перехоплює його поведінку. У JavaScript для цього є Proxy (перехоплення операцій над об’єктами), Reflect (мета-операції), Symbol і відомі символи (Symbol.iterator, Symbol.toPrimitive), дескриптори властивостей (Object.defineProperty), а також декоратори. Також сюди відносять інтроспекцію — Object.keys, typeof та instanceof.",
+      "categoryId": 3
+    },
+    {
+      "id": 274,
+      "question": "Як використовувати метапрограмування?",
+      "answer": "Приклади: реактивний стан через Proxy, який викликає оновлення при записі властивостей; автоматичне логування чи валідація через пастки get і set; приховані службові властивості через символи; власна поведінка при приведенні типів через [Symbol.toPrimitive]; незмінні або обчислювані властивості через Object.defineProperty з get і writable: false. Метапрограмування варто застосовувати обережно, бо воно ускладнює читання й налагодження коду.",
+      "categoryId": 3
+    },
+    {
+      "id": 275,
+      "question": "Що таке канали повідомлень (Message Channels)?",
+      "answer": "Channel Messaging API (MessageChannel) дозволяє створити двосторонній канал зв’язку між різними контекстами: сторінкою та iframe, сторінкою і воркером або двома воркерами. new MessageChannel() створює два пов’язані порти — port1 і port2: один залишають собі, інший передають іншій стороні, після чого повідомлення надсилаються через port.postMessage і приймаються через port.onmessage. Схожий API — BroadcastChannel — розсилає повідомлення всім вкладкам одного походження.",
+      "categoryId": 3
+    },
+    {
+      "id": 276,
+      "question": "Як працювати з канали повідомлень?",
+      "answer": "Створіть канал: const channel = new MessageChannel(); передайте один порт іншій стороні як transferable: iframe.contentWindow.postMessage('init', '*', [channel.port2]); слухайте повідомлення: channel.port1.onmessage = e => console.log(e.data); і надсилайте: channel.port1.postMessage({ type: 'ping' }). Друга сторона отримує порт з event.ports[0] і працює з ним так само. Якщо використовувати addEventListener замість onmessage, потрібно викликати port.start(); закривають канал через port.close().",
+      "categoryId": 3
+    },
+    {
+      "id": 277,
+      "question": "Що таке Atomics та SharedArrayBuffer?",
+      "answer": "SharedArrayBuffer — буфер пам’яті, спільний для кількох потоків (основного і воркерів) без копіювання. Atomics — набір атомарних операцій над такою пам’яттю (Atomics.add, load, store, compareExchange), які гарантують коректність при одночасному доступі, а також методи синхронізації Atomics.wait і Atomics.notify. З міркувань безпеки (Spectre) SharedArrayBuffer доступний лише на сторінках з крос-доменною ізоляцією (заголовки COOP і COEP).",
+      "categoryId": 3
+    },
+    {
+      "id": 278,
+      "question": "Як використовувати Atomics та SharedArrayBuffer?",
+      "answer": "Створюють спільний буфер і типізований масив поверх нього: const sab = new SharedArrayBuffer(1024); const counter = new Int32Array(sab), а потім передають sab воркеру через postMessage — дані не копіюються, обидва потоки бачать ту саму пам’ять. Для безпечних змін використовують атомарні операції: Atomics.add(counter, 0, 1), а для очікування — Atomics.wait(counter, 0, 0) у воркері і Atomics.notify(counter, 0) в іншому потоці. Це застосовують у високопродуктивних обчисленнях і WebAssembly.",
+      "categoryId": 3
+    },
+    {
+      "id": 279,
+      "question": "Що таке трансдюсери (Transducers)?",
+      "answer": "Трансдюсер — композиційне перетворення, яке трансформує функцію-редʼюсер, а не саму колекцію. Він дозволяє об’єднати кілька операцій (map, filter, take) в один прохід без створення проміжних масивів і не залежить від типу джерела даних: масив, потік, Observable. Концепція прийшла з Clojure, а в JavaScript її реалізують бібліотеки на кшталт transducers-js чи Ramda. Схожої ефективності досягають оператори RxJS і ліниві ітератори.",
+      "categoryId": 3
+    },
+    {
+      "id": 280,
+      "question": "Як працювати з трансдюсерами?",
+      "answer": "Трансдюсер — це функція, що приймає reducer і повертає новий reducer: const mapT = fn => reducer => (acc, x) => reducer(acc, fn(x)); const filterT = pred => reducer => (acc, x) => (pred(x) ? reducer(acc, x) : acc). Їх компонують і застосовують одним проходом: const xform = compose(filterT(x => x % 2), mapT(x => x * 10)); arr.reduce(xform((acc, x) => (acc.push(x), acc)), []). Так масив обробляється за один прохід замість двох з проміжним масивом.",
+      "categoryId": 3
+    },
+    {
+      "id": 281,
+      "question": "Що таке мемоізація (Memoization)?",
+      "answer": "Мемоізація — техніка оптимізації, за якої результат виклику функції кешується за її аргументами, і при повторному виклику з тими самими аргументами повертається збережене значення без повторних обчислень. Вона ефективна для чистих функцій з дорогими обчисленнями та рекурсії (наприклад, числа Фібоначчі). Ціна — додаткова пам’ять, тому для кешу іноді обмежують розмір або використовують WeakMap.",
+      "categoryId": 3
+    },
+    {
+      "id": 282,
+      "question": "Як реалізувати мемоізацію?",
+      "answer": "Проста реалізація через замикання: function memoize(fn) { const cache = new Map(); return function (...args) { const key = JSON.stringify(args); if (!cache.has(key)) cache.set(key, fn.apply(this, args)); return cache.get(key); }; }. Для одного аргументу-об’єкта краще використовувати WeakMap з самим об’єктом як ключем. В Angular роль мемоізації виконують pure pipes і computed() сигнали, а в RxJS — shareReplay.",
+      "categoryId": 3
+    },
+    {
+      "id": 283,
+      "question": "Що таке tree shaking?",
+      "answer": "Tree shaking — оптимізація, за якої бандлер (esbuild, webpack, Rollup) видаляє з фінальної збірки код, який імпортовано, але ніде не використано. Вона працює завдяки статичній структурі ES-модулів: бандлер аналізує import і export і будує граф залежностей ще до виконання. Результат — менший розмір бандлу і швидше завантаження застосунку.",
+      "categoryId": 3
+    },
+    {
+      "id": 284,
+      "question": "Як працювати з tree shaking?",
+      "answer": "Щоб tree shaking працював: використовуйте ES-модулі (import і export), а не CommonJS; імпортуйте лише потрібне (import { debounce } from 'lodash-es', а не весь lodash); уникайте побічних ефектів на верхньому рівні модулів і позначайте бібліотеки як вільні від них через \"sideEffects\": false у package.json; збирайте в production-режимі з мінімізацією. Перевірити результат можна аналізаторами бандлу, наприклад source-map-explorer.",
+      "categoryId": 3
+    },
+    {
+      "id": 285,
+      "question": "Що таке алгоритми розв’язання конфліктів?",
+      "answer": "Алгоритми розв’язання конфліктів визначають, як об’єднати зміни, які кілька користувачів чи пристроїв одночасно внесли в ті самі дані. Типові підходи: Last Write Wins (перемагає остання зміна за часом чи версією), оптимістичне блокування з версіями (запис відхиляється, якщо версія змінилась), Operational Transformation (як у Google Docs) і CRDT — структури даних, які зливаються автоматично без конфліктів. У вебзастосунках це актуально для офлайн-синхронізації та спільного редагування.",
+      "categoryId": 3
+    },
+    {
+      "id": 286,
+      "question": "Як реалізувати алгоритми розв’язання конфліктів?",
+      "answer": "Найпростіше — оптимістичне блокування: кожен запис має поле version, клієнт надсилає оновлення з версією, яку він бачив, а сервер приймає його лише при збігу версій, інакше повертає конфлікт (HTTP 409), і клієнт пропонує користувачу злити зміни. Last Write Wins реалізується порівнянням часових міток. Для спільного редагування в реальному часі використовують готові бібліотеки CRDT, наприклад Yjs або Automerge, які автоматично зливають зміни з різних клієнтів.",
+      "categoryId": 3
+    },
+    {
+      "id": 287,
+      "question": "Що таке прототипи у JavaScript?",
+      "answer": "Прототип — це об’єкт, від якого інший об’єкт успадковує властивості та методи. Кожен об’єкт має внутрішнє посилання [[Prototype]], утворюючи ланцюжок прототипів, що закінчується на null. Функції-конструктори та класи мають властивість prototype, яка стає прототипом створених ними об’єктів. Саме тому масив має методи map і filter — вони лежать в Array.prototype.",
+      "categoryId": 3
+    },
+    {
+      "id": 288,
+      "question": "Як працювати з прототипами?",
+      "answer": "Отримати прототип можна через Object.getPrototypeOf(obj), а встановити — через Object.setPrototypeOf (повільно, краще уникати) або створити об’єкт з потрібним прототипом через Object.create(proto). Методи додають у прототип конструктора або оголошують у класі. Перевірки: obj.hasOwnProperty('x') або Object.hasOwn(obj, 'x') (власна властивість), 'x' in obj (власна або успадкована), proto.isPrototypeOf(obj) і obj instanceof Class. Змінювати прототипи вбудованих об’єктів не рекомендується.",
+      "categoryId": 3
+    },
+    {
+      "id": 289,
+      "question": "Що таке JavaScript Engine?",
+      "answer": "JavaScript Engine — програма, що виконує JavaScript-код. Найвідоміші: V8 (Chrome, Edge, Node.js), SpiderMonkey (Firefox) і JavaScriptCore (Safari). Рушій парсить код, компілює його в байт-код і машинний код, керує пам’яттю через збирач сміття і забезпечує стек викликів та купу. Event loop, таймери, DOM і мережеві запити надає не сам рушій, а середовище виконання (браузер або Node.js).",
+      "categoryId": 3
+    },
+    {
+      "id": 290,
+      "question": "Як працює JavaScript Engine?",
+      "answer": "Рушій (на прикладі V8) спочатку розбирає код у абстрактне синтаксичне дерево (AST), потім інтерпретатор Ignition перетворює його на байт-код і починає виконувати. Під час виконання збирається статистика, і «гарячі» функції оптимізуючий JIT-компілятор (TurboFan) компілює в машинний код на основі припущень про типи; якщо припущення порушуються — відбувається деоптимізація. Об’єкти отримують приховані класи (shapes) та inline caches для швидкого доступу до властивостей, а збирач сміття поколіннями звільняє пам’ять.",
+      "categoryId": 3
+    },
+    {
+      "id": 291,
+      "question": "Що таке RxJS?",
+      "answer": "RxJS (Reactive Extensions for JavaScript) — це бібліотека для реактивного програмування за допомогою Observables, що дозволяє легко компонувати асинхронні або подієві програми. RxJS забезпечує великий набір операторів для створення, перетворення і комбінування потоків даних, що допомагає розробникам писати більш зрозумілий і підтримуваний асинхронний код. Бібліотека широко використовується у сучасних фронтенд-фреймворках, таких як Angular.",
+      "categoryId": 4
+    },
+    {
+      "id": 292,
+      "question": "Що таке Observable в RxJS?",
+      "answer": "Observable в RxJS — це основний будівельний блок, який представляє собою потік даних, що може містити нуль або більше значень, які можуть бути передані асинхронно. Observables можуть створюватися з масивів, подій, HTTP-запитів та інших джерел. Вони дозволяють обробляти дані у вигляді потоків, на які можна підписуватися (subscribe), застосовувати оператори трансформації, комбінувати і фільтрувати. Observables забезпечують ефективну роботу з асинхронними даними, такими як таймери, інтервали і події користувача.",
+      "categoryId": 4
+    },
+    {
+      "id": 293,
+      "question": "Як створити Observable?",
+      "answer": "Observable можна створити кількома способами. Найбільш поширений спосіб — це використання конструктора Observable. Інший спосіб — це використання створюючих операторів, таких як of, from, interval і fromEvent. Ці методи дозволяють легко створювати Observables з різних джерел даних, таких як масиви, події DOM, таймери та проміси.",
+      "categoryId": 4
+    },
+    {
+      "id": 294,
+      "question": "Що таке Observer в RxJS?",
+      "answer": "Observer в RxJS — це об’єкт, який визначає набір з трьох колбеків: next, error і complete. Ці колбеки використовуються для обробки значень, помилок і завершення Observable відповідно. Observer підписується (subscribe) на Observable для отримання повідомлень і виклику відповідних колбеків. Observer забезпечує механізм обробки асинхронних даних, що передаються Observable.",
+      "categoryId": 4
+    },
+    {
+      "id": 295,
+      "question": "Як працює метод subscribe()?",
+      "answer": "Метод subscribe() дозволяє Observer підписатися на Observable для отримання значень. Він приймає об’єкт Observer або окремі колбеки для обробки значень, помилок і завершення. Під час підписки Observable починає передавати дані Observer. Метод subscribe() також повертає об’єкт Subscription, який дозволяє відписатися від Observable, припинивши отримання даних і звільнивши ресурси.",
+      "categoryId": 4
+    },
+    {
+      "id": 296,
+      "question": "Що таке оператори в RxJS?",
+      "answer": "Оператори — це функції, що дозволяють трансформувати, фільтрувати й комбінувати потоки. Є два види: creation-оператори створюють нові Observable (of, from, interval, fromEvent, timer, combineLatest, forkJoin), а pipeable-оператори передаються в метод pipe() і повертають новий Observable, не змінюючи вихідного: source$.pipe(filter(x => x > 0), map(x => x * 2)). Оператори поділяють на групи: трансформації, фільтрації, комбінування, обробки помилок, мультикастингу та утиліти.",
+      "categoryId": 4
+    },
+    {
+      "id": 297,
+      "question": "Що таке Subject в RxJS?",
+      "answer": "Subject — це одночасно Observable і Observer: на нього можна підписатися, а також вручну передавати значення через next(), помилку через error() і завершення через complete(). Subject мультикастовий — усі підписники отримують ті самі значення, але лише ті, що надійшли після підписки. Його використовують для подій між компонентами, шин повідомлень і сигналів знищення (destroy$). Варіації: BehaviorSubject, ReplaySubject, AsyncSubject.",
+      "categoryId": 4
+    },
+    {
+      "id": 298,
+      "question": "Що таке BehaviorSubject?",
+      "answer": "BehaviorSubject — різновид Subject, який зберігає поточне значення і потребує початкового значення при створенні: new BehaviorSubject(0). Кожен новий підписник одразу отримує останнє значення, а поточне можна прочитати синхронно через getValue() або value. Його широко використовують в Angular-сервісах для зберігання стану (користувач, налаштування, кошик), назовні віддаючи лише asObservable().",
+      "categoryId": 4
+    },
+    {
+      "id": 299,
+      "question": "Що таке ReplaySubject?",
+      "answer": "ReplaySubject зберігає кілька останніх значень і відтворює їх кожному новому підписнику. Розмір буфера задається першим аргументом (new ReplaySubject(3)), а другим можна обмежити час зберігання значень у мілісекундах. На відміну від BehaviorSubject, він не потребує початкового значення. Його використовують для кешування, коли пізнім підписникам потрібна історія подій.",
+      "categoryId": 4
+    },
+    {
+      "id": 300,
+      "question": "Що таке AsyncSubject?",
+      "answer": "AsyncSubject видає підписникам лише останнє значення і лише після того, як викликано complete(). Якщо потік завершився з помилкою, підписники отримають лише помилку. Поведінкою він схожий на Promise: одне фінальне значення для всіх підписників, навіть тих, що підписались пізніше. Використовується рідко — переважно для кешування результату одноразової асинхронної операції.",
+      "categoryId": 4
+    },
+    {
+      "id": 301,
+      "question": "Що таке hot Observable?",
+      "answer": "Hot Observable генерує значення незалежно від того, чи є підписники, і всі підписники ділять одне джерело. Новий підписник отримує лише значення, що з’явились після підписки — як при підключенні до прямої трансляції. Приклади: події DOM (fromEvent), Subject, WebSocket, а також холодний потік, зроблений гарячим через share().",
+      "categoryId": 4
+    },
+    {
+      "id": 302,
+      "question": "Що таке cold Observable?",
+      "answer": "Cold Observable починає генерувати значення лише при підписці, і кожен підписник отримує власне незалежне виконання з самого початку — як перегляд відео на вимогу. Приклади: of, from, interval, а також HttpClient в Angular: кожна підписка на this.http.get() відправляє новий HTTP-запит. Більшість Observable, створених через creation-оператори, — холодні.",
+      "categoryId": 4
+    },
+    {
+      "id": 303,
+      "question": "Яка різниця між hot і cold Observables?",
+      "answer": "Різниця в тому, де створюється джерело даних. Cold Observable створює джерело всередині, при кожній підписці, тому кожен підписник має окреме виконання і отримує всі значення з початку (HTTP-запит виконається для кожного підписника). Hot Observable використовує зовнішнє спільне джерело, тому підписники ділять одне виконання і бачать лише значення після підписки. Холодний потік перетворюють на гарячий операторами share() і shareReplay().",
+      "categoryId": 4
+    },
+    {
+      "id": 304,
+      "question": "Що таке операція map()?",
+      "answer": "map() застосовує функцію до кожного значення потоку і видає результат — аналог Array.prototype.map, але для значень у часі: source$.pipe(map(user => user.name)). Функція отримує також індекс значення. В Angular map часто використовують для перетворення відповіді сервера: this.http.get(url).pipe(map(res => res.data)). Якщо функція повертає Observable, потрібен не map, а оператор вирівнювання — switchMap, mergeMap чи concatMap.",
+      "categoryId": 4
+    },
+    {
+      "id": 305,
+      "question": "Що таке операція filter()?",
+      "answer": "filter() пропускає далі лише ті значення, для яких предикат повертає true: clicks$.pipe(filter(e => e.shiftKey)). Це аналог Array.prototype.filter для потоків. Предикат може бути type guard, тоді TypeScript звузить тип значень у потоці: filter((x): x is User => x !== null). Схожі оператори фільтрації: take, first, skip, distinctUntilChanged, debounceTime.",
+      "categoryId": 4
+    },
+    {
+      "id": 306,
+      "question": "Що таке мультикастінг в RxJS?",
+      "answer": "Мультикастинг — передача значень одного виконання Observable кільком підписникам одночасно. За замовчуванням Observable юнікастові: кожна підписка запускає окреме виконання, наприклад окремий HTTP-запит. Мультикастинг реалізується через Subject і оператори share(), shareReplay(), а також функцію connectable(). Він дозволяє уникнути дублювання запитів і обчислень.",
+      "categoryId": 4
+    },
+    {
+      "id": 307,
+      "question": "Як використовувати multicast()?",
+      "answer": "multicast() застарів у RxJS 7 і буде видалений у версії 8. Раніше його використовували так: source$.pipe(multicast(new Subject())), а потім викликали connect(), щоб запустити спільне виконання. Тепер замість нього використовують share() з налаштуваннями (connector, resetOnRefCountZero), shareReplay() або функцію connectable(source$, { connector: () => new Subject() }) з ручним connect().",
+      "categoryId": 4
+    },
+    {
+      "id": 308,
+      "question": "Що таке юнікастінг в RxJS?",
+      "answer": "Юнікастинг — поведінка Observable за замовчуванням, коли кожен підписник отримує власне незалежне виконання потоку. Тобто для двох підписок на this.http.get(url) буде відправлено два HTTP-запити, а interval для кожного підписника почне відлік з нуля. Це прямо протилежно мультикастингу, де одне виконання ділять усі підписники.",
+      "categoryId": 4
+    },
+    {
+      "id": 309,
+      "question": "Як працювати з share()?",
+      "answer": "share() робить потік мультикастовим: перший підписник запускає виконання, наступні приєднуються до нього, а коли відписується останній, виконання зупиняється. Наприклад, const data$ = this.http.get(url).pipe(share()) — кілька async pipe в шаблоні спричинять лише один запит, якщо підпишуться одночасно. Якщо пізнім підписникам потрібні попередні значення, використовують shareReplay({ bufferSize: 1, refCount: true }). У RxJS 7 share приймає налаштування connector і reset-параметри.",
+      "categoryId": 4
+    },
+    {
+      "id": 310,
+      "question": "Як створити кастомний оператор у RxJS?",
+      "answer": "Найпростіше скласти оператор з існуючих через pipe(): const filterNil = () => pipe(filter(x => x != null)) і використовувати як source$.pipe(filterNil()). Для повного контролю пишуть функцію, що приймає вихідний Observable і повертає новий: const double = () => (source) => new Observable(subscriber => source.subscribe({ next: v => subscriber.next(v * 2), error: e => subscriber.error(e), complete: () => subscriber.complete() })). Важливо коректно передавати помилки, завершення і відписку.",
+      "categoryId": 4
+    },
+    {
+      "id": 311,
+      "question": "Як використовувати debounceTime() у реальному проекті?",
+      "answer": "debounceTime(ms) видає значення лише після того, як потік «затихне» на заданий час, і відкидає проміжні значення. Класичний приклад — пошук при введенні: this.searchControl.valueChanges.pipe(debounceTime(300), distinctUntilChanged(), switchMap(term => this.api.search(term))). Так запит відправляється лише коли користувач зробив паузу, а попередній запит скасовується. Також debounceTime застосовують до resize, автозбереження форм і валідації.",
+      "categoryId": 4
+    },
+    {
+      "id": 312,
+      "question": "Що таке switchMap() і коли його використовувати?",
+      "answer": "switchMap() перетворює кожне значення на внутрішній Observable і підписується на нього, скасовуючи попередній внутрішній Observable, якщо той ще не завершився. Його використовують, коли важливий лише результат останнього запиту: пошук при введенні, завантаження даних при зміні параметра маршруту (paramMap.pipe(switchMap(p => this.service.load(p.get('id'))))). Не варто використовувати switchMap для операцій запису (POST, DELETE), бо скасування може загубити дані.",
+      "categoryId": 4
+    },
+    {
+      "id": 313,
+      "question": "Як працювати з forkJoin() для обробки кількох запитів?",
+      "answer": "forkJoin() запускає кілька Observable паралельно і видає один результат — масив або об’єкт останніх значень, коли всі вони завершаться: forkJoin({ user: this.api.getUser(), orders: this.api.getOrders() }).subscribe(({ user, orders }) => ...). Він ідеальний для HTTP-запитів, які завершуються після однієї відповіді. Якщо хоча б один потік завершиться з помилкою, forkJoin видасть помилку, тому кожен запит варто захистити через catchError. Потоки, що не завершуються, forkJoin ніколи не дочекається.",
+      "categoryId": 4
+    },
+    {
+      "id": 314,
+      "question": "Як обробляти помилки за допомогою catchError()?",
+      "answer": "catchError() перехоплює помилку в потоці і замінює її іншим Observable: this.http.get(url).pipe(catchError(err => { this.notify(err); return of([]); })). Можна повернути значення за замовчуванням, EMPTY (просто завершити потік) або повторно кинути помилку через throwError(() => err). Важливе місце оператора: якщо поставити catchError всередині switchMap, помилка одного запиту не «вб’є» зовнішній потік (наприклад, пошук продовжить працювати).",
+      "categoryId": 4
+    },
+    {
+      "id": 315,
+      "question": "Що таке mergeMap() і як він відрізняється від switchMap()?",
+      "answer": "mergeMap() (flatMap) перетворює кожне значення на внутрішній Observable і підписується на всі одночасно, об’єднуючи їхні результати без скасування попередніх. switchMap() натомість скасовує попередній внутрішній потік при появі нового значення. mergeMap підходить для незалежних паралельних операцій (наприклад, завантаження кількох файлів), а кількість одночасних підписок можна обмежити другим аргументом. switchMap підходить, коли актуальний лише останній результат.",
+      "categoryId": 4
+    },
+    {
+      "id": 316,
+      "question": "Як управляти підписками в Angular за допомогою RxJS?",
+      "answer": "Основні підходи: async pipe в шаблоні (підписується і відписується автоматично — найкращий варіант); takeUntilDestroyed() з Angular 16 (з @angular/core/rxjs-interop); патерн takeUntil(this.destroy$) з emit і complete у ngOnDestroy; збереження Subscription і виклик unsubscribe() у ngOnDestroy. HTTP-запити завершуються самі, а відписуватись обов’язково потрібно від довготривалих потоків: interval, valueChanges, подій роутера, Subject у сервісах.",
+      "categoryId": 4
+    },
+    {
+      "id": 317,
+      "question": "Що таке оператор takeUntil() і як його використовувати?",
+      "answer": "takeUntil(notifier$) пропускає значення, доки notifier$ не видасть перше значення, після чого завершує потік і відписується від джерела. Класичний патерн в Angular: private destroy$ = new Subject<void>(); у ngOnInit — this.data$.pipe(takeUntil(this.destroy$)).subscribe(...), а в ngOnDestroy — this.destroy$.next() і this.destroy$.complete(). Важливо ставити takeUntil останнім у pipe, після операторів вирівнювання на кшталт switchMap, інакше внутрішні підписки можуть залишитися активними.",
+      "categoryId": 4
+    },
+    {
+      "id": 318,
+      "question": "Як застосовувати combineLatest() у реальних додатках?",
+      "answer": "combineLatest() видає масив (або об’єкт) останніх значень усіх потоків щоразу, коли будь-який з них видає нове значення, але лише після того, як кожен видав хоча б одне. Типові випадки: фільтрація списку за кількома критеріями (combineLatest([items$, search$, sort$]).pipe(map(([items, term, sort]) => ...))), формування view model компонента з кількох джерел, обчислення стану кнопки з кількох полів форми. Для потоків без початкового значення додають startWith.",
+      "categoryId": 4
+    },
+    {
+      "id": 319,
+      "question": "Як використовувати retryWhen() для повторного запиту?",
+      "answer": "retryWhen() застарів у RxJS 7 — замість нього використовують retry() з конфігурацією. Наприклад, три повтори з експоненційною затримкою: this.http.get(url).pipe(retry({ count: 3, delay: (error, retryCount) => timer(2 ** retryCount * 1000) })). У функції delay можна аналізувати помилку і не повторювати, наприклад, при 4xx — для цього повертають throwError(() => error). Після вичерпання спроб помилка піде далі, тому після retry зазвичай ставлять catchError.",
+      "categoryId": 4
+    },
+    {
+      "id": 320,
+      "question": "Що таке асинхронне програмування з RxJS?",
+      "answer": "Асинхронне програмування з RxJS — це підхід, у якому події, запити, таймери й зміни стану представляються як потоки значень у часі (Observable), а логіка будується декларативно через композицію операторів. На відміну від промісів, Observable можуть видавати багато значень, є лінивими, підтримують скасування (відписку) і мають багатий набір операторів для комбінування, обмеження частоти, повторів і обробки помилок.",
+      "categoryId": 4
+    },
+    {
+      "id": 321,
+      "question": "Як працювати з реактивними формами в Angular за допомогою RxJS?",
+      "answer": "Reactive форми в Angular надають потоки valueChanges і statusChanges, які зручно обробляти операторами RxJS: debounceTime і distinctUntilChanged для пошуку чи автозбереження, switchMap для запитів на сервер на основі введених даних, combineLatest для залежних полів, filter для обробки лише валідних значень. Асинхронні валідатори повертають Observable. Не забувайте відписуватись через takeUntilDestroyed або async pipe.",
+      "categoryId": 4
+    },
+    {
+      "id": 322,
+      "question": "Як оптимізувати продуктивність за допомогою мультикастінгу?",
+      "answer": "Мультикастинг дозволяє не виконувати однакову роботу кілька разів: shareReplay({ bufferSize: 1, refCount: true }) кешує результат HTTP-запиту для всіх підписників (наприклад, довідники чи налаштування в сервісі), а share() дозволяє кільком async pipe в шаблоні використовувати одне виконання потоку. Так зменшується кількість запитів, обчислень і підписок на дорогі джерела (WebSocket, геолокацію). З shareReplay варто бути обережним: без refCount: true підписка на джерело може залишитися назавжди.",
+      "categoryId": 4
+    },
+    {
+      "id": 333,
+      "question": "Що таке патерн backpressure і як його обробляти?",
+      "answer": "Backpressure — ситуація, коли джерело видає дані швидше, ніж споживач встигає їх обробити. RxJS працює за push-моделлю і не має вбудованого механізму зворотного тиску, тому проблему вирішують операторами: обмеження частоти (throttleTime, debounceTime, auditTime, sampleTime), накопичення пачками (bufferTime, bufferCount), відкидання значень під час обробки (exhaustMap) і обмеження паралельності (mergeMap з параметром concurrent або concatMap).",
+      "categoryId": 4
+    },
+    {
+      "id": 334,
+      "question": "Як реалізувати складні послідовності операторів у RxJS?",
+      "answer": "Складні послідовності будують з невеликих операторів: розділяють логіку на іменовані проміжні потоки, виносять повторювані ланцюжки у власні оператори через pipe() і правильно обирають оператори вирівнювання (switchMap для пошуку, concatMap для послідовних записів, exhaustMap для кнопок відправки). Обробку помилок розміщують якомога ближче до місця, де вони можуть виникнути. Для багатьох запитів використовують forkJoin або combineLatest, а для стану — scan. Для налагодження додають tap з логуванням.",
+      "categoryId": 4
+    },
+    {
+      "id": 335,
+      "question": "Як використовувати RxJS для обробки вебсокетів?",
+      "answer": "RxJS має вбудований webSocket() з rxjs/webSocket, який створює WebSocketSubject: const socket$ = webSocket('wss://example.com'). Підписка відкриває з’єднання, socket$.next(msg) надсилає повідомлення, а значення потоку — це отримані повідомлення, автоматично розібрані з JSON. Метод multiplex дозволяє ділити один сокет на кілька логічних каналів. Для перепідключення додають retry({ delay: 3000 }), а для спільного використання — share().",
+      "categoryId": 4
+    },
+    {
+      "id": 336,
+      "question": "Що таке оператор finalize() і як його використовувати?",
+      "answer": "finalize(callback) викликає функцію, коли потік завершується будь-яким способом: успішно (complete), з помилкою (error) або через відписку. Це аналог блоку finally. Типове використання — прибрати індикатор завантаження: this.isLoading = true; this.api.load().pipe(finalize(() => this.isLoading = false)).subscribe(). Також finalize використовують для логування та звільнення ресурсів.",
+      "categoryId": 4
+    },
+    {
+      "id": 337,
+      "question": "Як працювати з операторами higher-order mapping (mergeMap, switchMap, concatMap, exhaustMap)?",
+      "answer": "Higher-order mapping оператори перетворюють значення на внутрішній Observable і по-різному керують підписками. switchMap скасовує попередній внутрішній потік — для пошуку й навігації. mergeMap виконує всі паралельно — для незалежних операцій. concatMap ставить у чергу і виконує по одному в порядку надходження — для послідовних записів, де важливий порядок. exhaustMap ігнорує нові значення, поки поточний внутрішній потік не завершиться — для кнопки «Зберегти» чи логіну, щоб уникнути дублювання.",
+      "categoryId": 4
+    },
+    {
+      "id": 338,
+      "question": "Як використовувати scan() для створення акумуляторів стану?",
+      "answer": "scan(accumulator, seed) — аналог reduce, але видає проміжний результат після кожного значення. Це зручно для акумуляції стану: лічильник кліків (clicks$.pipe(scan(count => count + 1, 0))), накопичення сторінок при нескінченному скролі, або простий redux-подібний стан: actions$.pipe(scan((state, action) => reducer(state, action), initialState)). Разом із startWith і shareReplay scan дозволяє побудувати легковагове сховище стану.",
+      "categoryId": 4
+    },
+    {
+      "id": 339,
+      "question": "Як реалізувати кастомний Subject?",
+      "answer": "Найкраще створювати потрібну поведінку композицією, а не наслідуванням: наприклад, сховище стану як клас з приватним BehaviorSubject, методами для оновлення та публічним asObservable(). Можна також розширити Subject і перевизначити next(), щоб додати логування, валідацію чи трансформацію: class LoggingSubject<T> extends Subject<T> { override next(value: T) { console.log(value); super.next(value); } }. Наслідування від Subject офіційно не рекомендується, бо внутрішня реалізація може змінитися.",
+      "categoryId": 4
+    },
+    {
+      "id": 340,
+      "question": "Як тестувати RxJS оператори?",
+      "answer": "Для тестування потоків, залежних від часу, використовують marble testing з TestScheduler: testScheduler.run(({ cold, expectObservable }) => { const source = cold('-a-b-c|'); expectObservable(source.pipe(map(x => x.toUpperCase()))).toBe('-A-B-C|'); }). Віртуальний час дозволяє тестувати debounceTime чи delay миттєво. Прості потоки можна тестувати підпискою з перевіркою значень або через firstValueFrom і lastValueFrom з async/await. В Angular для таймерів також використовують fakeAsync і tick.",
+      "categoryId": 4
+    },
+    {
+      "id": 341,
+      "question": "Як використовувати RxJS у поєднанні з іншими бібліотеками (наприклад, Redux)?",
+      "answer": "RxJS добре поєднується з іншими бібліотеками: Redux-сховище можна перетворити на Observable через from(store) (воно підтримує протокол Symbol.observable), а побічні ефекти реалізувати через redux-observable (epics — потоки дій). В Angular на RxJS побудовано NgRx: Store — це Observable, а Effects — потоки дій з операторами. Promise-API обгортають через from(), події DOM — через fromEvent(), а сигнали Angular — через toObservable() і toSignal().",
+      "categoryId": 4
+    },
+    {
+      "id": 342,
+      "question": "Що таке Observable-based state management?",
+      "answer": "Observable-based state management — підхід, коли стан застосунку зберігається в потоках (зазвичай BehaviorSubject) у сервісах, а компоненти підписуються на них і отримують оновлення автоматично. Типовий сервіс має приватний BehaviorSubject, публічний read-only Observable (asObservable()) і методи для зміни стану; похідні дані отримують через map, combineLatest і distinctUntilChanged. Масштабованими версіями цього підходу є NgRx Store і NgRx ComponentStore.",
+      "categoryId": 4
+    },
+    {
+      "id": 343,
+      "question": "Як використовувати RxJS для обробки подій у великомасштабних додатках?",
+      "answer": "У великих застосунках події представляють як потоки й обробляють централізовано: шина подій на основі Subject в сервісі з типізованими подіями й фільтрацією за типом (filter(e => e.type === 'login')), архітектура «дія — ефект — стан» (NgRx), обмеження частоти подій (throttleTime для scroll, debounceTime для введення), об’єднання джерел через merge. Важливо мати строгі типи подій, чітко розподіляти відповідальність між сервісами та контролювати відписки, щоб уникати витоків пам’яті.",
+      "categoryId": 4
+    },
+    {
+      "id": 344,
+      "question": "Як ефективно відлагоджувати RxJS оператори?",
+      "answer": "Для налагодження використовують tap з логуванням на різних етапах ланцюжка: tap({ next: v => console.log('after map', v), error: console.error, complete: () => console.log('done') }), або власний оператор debug(tag). Допомагають також DevTools браузера з точками зупину всередині операторів, Redux DevTools для NgRx і бібліотеки візуалізації потоків (rxjs-spy). Часті проблеми: забута підписка (холодний потік нічого не робить), подвійні запити через відсутність share, неправильний оператор вирівнювання та «тиха» помилка, що завершила потік.",
+      "categoryId": 4
+    },
+    {
+      "id": 345,
+      "question": "Що таке оператор toPromise() і коли його варто використовувати?",
+      "answer": "toPromise() перетворював Observable на Promise, що виконувався останнім значенням після завершення потоку. У RxJS 7 він застарів, бо мав неоднозначну поведінку: для порожнього потоку повертав undefined. Замість нього використовують firstValueFrom(source$) (перше значення, після чого відписка) і lastValueFrom(source$) (останнє значення після завершення); для порожнього потоку вони кидають EmptyError або повертають defaultValue з налаштувань. Їх доцільно використовувати там, де потрібен саме Promise, наприклад з async/await.",
+      "categoryId": 4
+    },
+    {
+      "id": 346,
+      "question": "Як працювати з операторами time-based (debounceTime, throttleTime, auditTime)?",
+      "answer": "Усі три обмежують частоту подій, але по-різному. debounceTime чекає паузи у потоці і видає останнє значення — для пошуку при введенні та автозбереження. throttleTime видає перше значення і ігнорує наступні впродовж заданого часу (з налаштуваннями leading і trailing) — для кліків чи скролу, коли потрібна негайна реакція. auditTime після першого значення чекає заданий час і видає останнє за цей період — для resize і mousemove, де важливий актуальний стан. Схожий за поведінкою — sampleTime.",
+      "categoryId": 4
+    },
+    {
+      "id": 347,
+      "question": "Як використовувати RxJS для роботи з графічним інтерфейсом?",
+      "answer": "Події інтерфейсу перетворюють на потоки через fromEvent: fromEvent(button, 'click'), fromEvent(window, 'resize'), і будують на них логіку: drag-and-drop через комбінацію mousedown, mousemove і mouseup зі switchMap і takeUntil, нескінченний скрол з throttleTime і filter, подвійний клік через buffer і debounceTime, гарячі клавіші через filter. В Angular для подій шаблону частіше використовують event binding, а RxJS — для складних сценаріїв або в директивах.",
+      "categoryId": 4
+    },
+    {
+      "id": 348,
+      "question": "Що таке flattening операції і як вони працюють?",
+      "answer": "Flattening (вирівнювання) — це перетворення потоку потоків (Observable, що видає Observable) на звичайний потік значень. Оператори вирівнювання підписуються на внутрішні Observable і передають їхні значення в зовнішній потік. Стратегія визначає поведінку при появі нового внутрішнього потоку: mergeAll і mergeMap (паралельно), concatAll і concatMap (по черзі), switchAll і switchMap (скасувати попередній), exhaustAll і exhaustMap (ігнорувати нові, поки працює поточний).",
+      "categoryId": 4
+    },
+    {
+      "id": 349,
+      "question": "Як реалізувати і обробляти асинхронні події з RxJS?",
+      "answer": "Асинхронні джерела перетворюють на Observable: fromEvent для подій, from для промісів і масивів, interval і timer для таймерів, HttpClient для запитів, webSocket для сокетів. Далі їх комбінують операторами (merge, combineLatest, switchMap), обмежують частоту (debounceTime, throttleTime), обробляють помилки через catchError і retry, а результат споживають через subscribe або async pipe. Важливо обирати правильний оператор вирівнювання і стежити за відписками.",
+      "categoryId": 4
+    },
+    {
+      "id": 350,
+      "question": "Як використовувати RxJS у прогресивних веб-додатках (PWA)?",
+      "answer": "У PWA RxJS допомагає реактивно обробляти мережевий стан і оновлення: стан онлайн чи офлайн можна отримати через merge(fromEvent(window, 'online'), fromEvent(window, 'offline')).pipe(map(() => navigator.onLine), startWith(navigator.onLine)). В Angular сервіс SwUpdate надає versionUpdates як Observable для повідомлення про нові версії, а SwPush — потоки messages і notificationClicks для push-повідомлень. RxJS також зручний для черги офлайн-запитів з повторною відправкою після відновлення з’єднання.",
+      "categoryId": 4
+    }
+  ]
+}

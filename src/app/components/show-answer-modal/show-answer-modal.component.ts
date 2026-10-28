@@ -5,20 +5,20 @@ import { MatButtonModule } from '@angular/material/button';
 import { TypingAnimationDirective } from '../../directives/typing-animation.directive';
 
 @Component({
-  selector: 'app-generate-answer-modal',
+  selector: 'app-show-answer-modal',
   standalone: true,
   imports: [MatButtonModule, TypingAnimationDirective],
-  templateUrl: './generate-answer-modal.component.html',
-  styleUrl: './generate-answer-modal.component.scss',
+  templateUrl: './show-answer-modal.component.html',
+  styleUrl: './show-answer-modal.component.scss',
 })
-export class GenerateAnswerModalComponent {
+export class ShowAnswerModalComponent {
   constructor(
-    public dialogRef: MatDialogRef<GenerateAnswerModalComponent>,
+    public dialogRef: MatDialogRef<ShowAnswerModalComponent>,
     @Inject(MAT_DIALOG_DATA)
     public data: Pick<QuestionItem, 'question' | 'answer'>
   ) {}
 
-  saveAnswer() {
-    this.dialogRef.close(this.data.answer);
+  close() {
+    this.dialogRef.close();
   }
 }

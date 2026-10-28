@@ -8,7 +8,9 @@
   text-align: center;
 }
 
-.mat-column-question {
+.mat-column-question,
+.mat-column-answer, 
+.mat-column-actions {
   padding-left: 16px;
   font-size: 18px;
 }
