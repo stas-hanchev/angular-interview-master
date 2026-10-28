@@ -3,12 +3,13 @@ import { Injectable, inject } from '@angular/core';
 import { StorageService } from './storage.service';
 import { Observable, tap } from 'rxjs';
 import { UserRegisterResponse } from '../models/response.model';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SignUpService {
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = environment.apiUrl;
 
   private http = inject(HttpClient);
   private storageService = inject(StorageService);

@@ -3,12 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable, delay, map } from 'rxjs';
 import { QuestionItem } from '../components/category/category.component.config';
 import { CategoryResponse, ResponseArray } from '../models/response.model';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PreparationService {
-  public baseUrl = 'http://localhost:3000';
+  public baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
