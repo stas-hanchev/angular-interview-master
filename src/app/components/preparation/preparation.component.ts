@@ -2,33 +2,51 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ActivatedRoute } from '@angular/router';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject, filter, switchMap, takeUntil } from 'rxjs';
 import { DeleteConfirmationModalComponent } from '../delete-confirmation-modal/delete-confirmation-modal.component';
-import { QuestionItem, getQuestionsByCategory } from '../category/category.component.config';
-import { TruncatePipe } from '../../pipes/truncate.pipe';
+import { QuestionItem } from '../category/category.component.config';
 import { GenerateAnswerModalComponent } from '../generate-answer-modal/generate-answer-modal.component';
+import { PreparationService } from '../../services/preparation.service';
 
 @Component({
   selector: 'app-preparation',
   standalone: true,
-  imports: [MatTableModule, MatButtonModule, TruncatePipe],
+  imports: [MatTableModule, MatButtonModule, MatProgressSpinnerModule],
   templateUrl: './preparation.component.html',
   styleUrl: './preparation.component.scss',
 })
 export class PreparationComponent implements OnInit, OnDestroy {
   displayedColumns: string[] = ['position', 'question', 'actions'];
   dataSource = new MatTableDataSource<QuestionItem>();
+  category: string = '';
+  isLoading = false;
 
   private destroy$ = new Subject<void>();
 
-  constructor(public dialog: MatDialog, private route: ActivatedRoute) {}
+  constructor(
+    public dialog: MatDialog,
+    private preparationService: PreparationService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.route.queryParamMap.pipe(takeUntil(this.destroy$)).subscribe((params) => {
-      // TODO - use service instead of mocks
-      this.dataSource.data = getQuestionsByCategory(params.get('tabName') || 'angular');
-    });
+    this.route.queryParamMap
+      .pipe(
+        switchMap((params) => {
+          this.category = params.get('tabName') || 'angular';
+          this.isLoading = true;
+          return this.preparationService.getPreparationQuestionsByCategory(
+            this.category
+          );
+        }),
+        takeUntil(this.destroy$)
+      )
+      .subscribe((response) => {
+        this.isLoading = false;
+        this.dataSource.data = response.data;
+      });
   }
 
   ngOnDestroy(): void {
@@ -45,12 +63,23 @@ export class PreparationComponent implements OnInit, OnDestroy {
       }
     });
 
-    dialogRef.afterClosed().subscribe((result: string) => {
-      console.log('The dialog was closed', result);
-      if (result) {
-        // TODO - call the service for updating an answer
-      }
-    });
+    dialogRef
+      .afterClosed()
+      .pipe(
+        filter((answer: string | undefined): answer is string => !!answer),
+        switchMap((answer) =>
+          this.preparationService.updatePreparationQuestionById(
+            this.category,
+            { answer },
+            question.id
+          )
+        )
+      )
+      .subscribe((response) => {
+        this.dataSource.data = this.dataSource.data.map((item) =>
+          item.id === response.data.id ? response.data : item
+        );
+      });
   }
 
   openDeleteDialog(question: QuestionItem): void {
@@ -58,12 +87,21 @@ export class PreparationComponent implements OnInit, OnDestroy {
       width: '333px',
     });
 
-    dialogRef.afterClosed().subscribe((result: boolean)=> {
-      console.log('The dialog was closed', result);
-      if (result) {
-        console.log('Question would be deleted.', question);
-        // TODO - call the service for deleting an answer
-      }
-    });
+    dialogRef
+      .afterClosed()
+      .pipe(
+        filter((result: boolean) => result),
+        switchMap(() =>
+          this.preparationService.deletePreparationQuestionById(
+            this.category,
+            question.id
+          )
+        )
+      )
+      .subscribe((response) => {
+        this.dataSource.data = this.dataSource.data.filter(
+          (item) => item.id !== response.data.id
+        );
+      });
   }
 }
